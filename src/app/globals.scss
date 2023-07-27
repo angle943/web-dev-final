@@ -173,6 +173,11 @@ h6 {
   line-height: var(--line-height-lg);
 }
 
+.text-base {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+}
+
 .text-sm {
   font-size: var(--font-size-sm);
   line-height: var(--line-height-sm);
