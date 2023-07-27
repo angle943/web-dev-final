@@ -1,0 +1,26 @@
+.container {
+  margin-top: 8rem;
+  margin-bottom: 2rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.initially-hidden {
+  transition: visibility ease-in 300ms;
+  opacity: 0;
+}
+
+.visible {
+  transition: opacity ease-in 300ms;
+  opacity: 1;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}

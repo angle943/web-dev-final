@@ -1,0 +1,32 @@
+// https://codepen.io/hylobates-lar/pen/qBbQeON
+@keyframes moving-bg {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+.background {
+  animation: moving-bg 5s ease infinite;
+  background: linear-gradient(
+    to bottom right,
+    rgb(var(--gray-950)),
+    rgb(var(--gray-950)),
+    rgb(var(--gray-950)),
+    rgb(var(--gray-900)),
+    rgb(var(--gray-900))
+  );
+  background-size: 400% 400%;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.video {
+  filter: brightness(50%);
+  width: 100%;
+}

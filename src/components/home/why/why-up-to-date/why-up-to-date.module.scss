@@ -1,0 +1,30 @@
+.container {
+  color: rgb(var(--gray-300));
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.icon {
+  height: 7rem;
+  width: 7rem;
+  animation: spin 2s linear infinite;
+  transform-origin: 45% 50%;
+}
+
+.text {
+  background: linear-gradient(rgb(var(--blue-100)), rgb(var(--blue-700)));
+  background-clip: text;
+  color: transparent;
+}

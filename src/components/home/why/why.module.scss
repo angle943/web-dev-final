@@ -1,0 +1,42 @@
+.wrapper {
+  background: linear-gradient(rgb(var(--gray-900)) 70%, rgb(var(--gray-950)));
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.title {
+  color: rgb(var(--gray-50));
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 18rem;
+  grid-gap: 2rem;
+  margin-top: 4rem;
+}
+
+.experts {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+}
+
+.hours {
+  grid-column: 3 / span 1;
+  grid-row: 1 / span 1;
+}
+
+.in-demand {
+  grid-column: 3 / span 1;
+  grid-row: 2 / span 1;
+}
+
+.up-to-date {
+  grid-column: 1 / span 1;
+  grid-row: 3 / span 1;
+}
+
+.progression {
+  grid-column: 2 / span 2;
+  grid-row: 3 / span 1;
+}

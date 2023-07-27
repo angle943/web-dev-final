@@ -1,0 +1,11 @@
+.wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 4rem;
+}
+
+.link {
+  &:hover {
+    font-weight: var(--font-weight-semibold);
+  }
+}

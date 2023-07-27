@@ -1,0 +1,28 @@
+.figure {
+  position: relative;
+
+  &:hover {
+    .image {
+      filter: unset;
+    }
+
+    .figcaption {
+      color: rgb(var(--gray-50));
+    }
+  }
+}
+
+.image {
+  filter: brightness(60%);
+  height: 4rem;
+  transition: filter 250ms ease-in;
+  width: 4rem;
+}
+
+.figcaption {
+  color: rgb(var(--gray-600));
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  transition: color 250ms ease-in;
+}

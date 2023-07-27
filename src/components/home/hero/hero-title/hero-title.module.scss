@@ -1,0 +1,21 @@
+.title {
+  color: rgb(var(--gray-50));
+}
+
+.cursor {
+  font-weight: var(--font-weight-thin);
+}
+
+.initially-hidden {
+  transition: visibility ease-in 300ms;
+  opacity: 0;
+}
+
+.visible {
+  transition: opacity ease-in 300ms;
+  opacity: 1;
+}
+
+.potential {
+  position: relative;
+}

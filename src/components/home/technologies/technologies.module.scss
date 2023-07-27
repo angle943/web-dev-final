@@ -1,0 +1,57 @@
+.backdrop {
+  background-color: rgb(var(--gray-900));
+}
+
+// https://codepen.io/studiojvla/pen/qVbQqW
+.container {
+  overflow: hidden;
+  position: relative;
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+
+  &::before,
+  &::after {
+    background: linear-gradient(
+      to right,
+      rgba(var(--gray-900), 1) 0%,
+      rgba(var(--gray-900), 0) 100%
+    );
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 4rem;
+    z-index: 1;
+  }
+
+  &::before {
+    left: 0;
+    top: 0;
+  }
+
+  &::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+  }
+}
+
+$animation-speed: 40s;
+$gap: 4rem;
+$logo-width: 4rem;
+$logo-count: 12;
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-4rem * 18 - 4rem * 18));
+  }
+}
+
+.track {
+  animation: scroll $animation-speed linear infinite;
+  display: flex;
+  gap: $gap;
+  width: calc(4rem * 36 + 4rem * 35);
+}

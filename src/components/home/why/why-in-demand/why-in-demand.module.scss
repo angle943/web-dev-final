@@ -1,0 +1,19 @@
+.container {
+  color: rgb(var(--gray-300));
+  padding: 3rem;
+  position: relative;
+}
+
+.image {
+  position: absolute;
+  left: 25%;
+  filter: brightness(15%);
+}
+
+.text {
+  background: linear-gradient(rgb(var(--blue-100)), rgb(var(--blue-700)));
+  background-clip: text;
+  color: transparent;
+  position: relative;
+  z-index: 1;
+}
