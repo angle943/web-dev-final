@@ -1,0 +1,12 @@
+.wrapper {
+  border-radius: 50%;
+  flex-shrink: 0;
+  width: 21rem;
+  height: 21rem;
+  overflow: hidden;
+}
+
+.image {
+  filter: grayscale(75%);
+  opacity: 0.8;
+}

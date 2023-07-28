@@ -1,0 +1,35 @@
+.container {
+  margin-bottom: 10rem;
+}
+
+.carousel {
+  display: flex;
+  gap: 10rem;
+  margin-bottom: 3rem;
+  overflow-x: hidden;
+}
+
+.buttons {
+  color: rgb(var(--gray-50));
+  justify-content: flex-end;
+  display: flex;
+  gap: 2rem;
+}
+
+.button {
+  border-radius: 50%;
+  border: 1px solid rgb(var(--gray-50));
+  padding: 0.5rem;
+  transition: transform 100ms ease-in;
+
+  &:disabled {
+    border-color: rgb(var(--gray-600));
+    color: rgb(var(--gray-600));
+    cursor: default;
+    transform: none !important;
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
