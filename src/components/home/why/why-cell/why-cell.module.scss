@@ -4,4 +4,9 @@
   height: 100%;
   position: relative;
   overflow: hidden;
+
+  &--light-mode {
+    background-color: rgb(var(--gray-50));
+    box-shadow: 0 0 0.5rem rgba(var(--gray-900), 0.5);
+  }
 }

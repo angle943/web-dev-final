@@ -5,6 +5,10 @@
   padding: 4rem;
   align-items: center;
   gap: 1rem;
+
+  &--light-mode {
+    color: rgb(var(--gray-700));
+  }
 }
 
 .number {
@@ -13,4 +17,9 @@
   color: transparent;
   font-size: var(--font-size-9xl);
   line-height: var(--font-size-9xl);
+
+  &--light-mode {
+    background: linear-gradient(rgb(var(--blue-900)), rgb(var(--blue-500)));
+    background-clip: text;
+  }
 }

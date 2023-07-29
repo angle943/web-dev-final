@@ -2,6 +2,7 @@ import { ReactNode, useCallback } from "react";
 import clsx from "clsx";
 import styles from "./hero-title.module.scss";
 import { UnderlinedText } from "@/components/underlined-text";
+import { useColorContext } from "@/context/color-context";
 
 export type HeroTitleProps = {
   typeCount: number;
@@ -10,6 +11,8 @@ export type HeroTitleProps = {
 };
 
 export function HeroTitle({ typeCount, cursorCount, showAll }: HeroTitleProps) {
+  const { isLightMode } = useColorContext();
+
   const renderTypingText = useCallback((): ReactNode => {
     const firstText = "Build your skills";
     const secondText = "as a developer.";
@@ -46,7 +49,11 @@ export function HeroTitle({ typeCount, cursorCount, showAll }: HeroTitleProps) {
   }, [cursorCount, typeCount]);
 
   return (
-    <h1 className={styles.title}>
+    <h1
+      className={clsx(styles.title, {
+        [styles["title--light-mode"]]: isLightMode,
+      })}
+    >
       {renderTypingText()} <br />
       <span
         className={clsx(styles["initially-hidden"], {

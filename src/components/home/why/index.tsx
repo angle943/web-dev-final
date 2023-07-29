@@ -6,12 +6,26 @@ import { WhyHours } from "@/components/home/why/why-hours";
 import { WhyInDemand } from "@/components/home/why/why-in-demand";
 import { WhyUpToDate } from "@/components/home/why/why-up-to-date";
 import { WhyProgression } from "@/components/home/why/why-progression";
+import { useColorContext } from "@/context/color-context";
+import clsx from "clsx";
 
 export function Why() {
+  const { isLightMode } = useColorContext();
+
   return (
-    <section className={styles.wrapper}>
+    <section
+      className={clsx(styles.wrapper, {
+        [styles["wrapper--light-mode"]]: isLightMode,
+      })}
+    >
       <Container>
-        <h2 className={styles.title}>Why ACDX?</h2>
+        <h2
+          className={clsx(styles.title, {
+            [styles["title--light-mode"]]: isLightMode,
+          })}
+        >
+          Why ACDX?
+        </h2>
         <div className={styles.grid}>
           <WhyCell className={styles.experts}>
             <WhyExperts />

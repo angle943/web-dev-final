@@ -2,10 +2,18 @@
   background: linear-gradient(rgb(var(--gray-900)) 70%, rgb(var(--gray-950)));
   padding-top: 8rem;
   padding-bottom: 8rem;
+
+  &--light-mode {
+    background: unset;
+  }
 }
 
 .title {
   color: rgb(var(--gray-50));
+
+  &--light-mode {
+    color: rgb(var(--gray-950));
+  }
 }
 
 .grid {

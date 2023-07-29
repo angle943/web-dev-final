@@ -5,6 +5,10 @@
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+
+  &--light-mode {
+    color: rgb(var(--gray-700));
+  }
 }
 
 @keyframes spin {
@@ -27,4 +31,9 @@
   background: linear-gradient(rgb(var(--blue-100)), rgb(var(--blue-700)));
   background-clip: text;
   color: transparent;
+
+  &--light-mode {
+    background: linear-gradient(rgb(var(--blue-900)), rgb(var(--blue-500)));
+    background-clip: text;
+  }
 }

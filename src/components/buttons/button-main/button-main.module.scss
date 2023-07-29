@@ -8,6 +8,39 @@
     border-color 200ms ease-in,
     background-color 200ms ease-in,
     color 200ms ease-in;
+
+  &--light-mode {
+    &--primary {
+      border-color: rgb(var(--blue-700));
+      background-color: rgb(var(--blue-700));
+      color: rgb(var(--gray-100));
+
+      &:hover {
+        border-color: rgb(var(--blue-600));
+        background-color: rgb(var(--blue-600));
+      }
+
+      &:active {
+        border-color: rgb(var(--blue-900));
+        background-color: rgb(var(--blue-900));
+      }
+    }
+
+    &--secondary {
+      border-color: rgb(var(--gray-950));
+      color: rgb(var(--gray-950));
+
+      &:hover {
+        background-color: rgb(var(--gray-950));
+        border-color: rgb(var(--gray-50));
+        color: rgb(var(--gray-50));
+      }
+
+      &:active {
+        background-color: rgb(var(--gray-600));
+      }
+    }
+  }
 }
 
 .button-main:hover {
@@ -42,5 +75,5 @@
 }
 
 .secondary:active {
-   background-color: rgb(var(--gray-400));
- }
+  background-color: rgb(var(--gray-400));
+}

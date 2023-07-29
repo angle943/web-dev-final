@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import clsx from "clsx";
 import styles from "./underlined-text.module.scss";
+import { useColorContext } from "@/context/color-context";
 
 export type UnderlinedTextProps = {
   children: ReactNode;
@@ -8,5 +9,14 @@ export type UnderlinedTextProps = {
 };
 
 export function UnderlinedText({ children, className }: UnderlinedTextProps) {
-  return <span className={clsx(styles.text, className)}>{children}</span>;
+  const { isLightMode } = useColorContext();
+  return (
+    <span
+      className={clsx(styles.text, className, {
+        [styles["text--light-mode"]]: isLightMode,
+      })}
+    >
+      {children}
+    </span>
+  );
 }

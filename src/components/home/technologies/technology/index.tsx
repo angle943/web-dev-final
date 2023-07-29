@@ -1,5 +1,7 @@
 import Image from "next/image";
 import styles from "./technology.module.scss";
+import { useColorContext } from "@/context/color-context";
+import clsx from "clsx";
 
 export type TechnologyProps = {
   imgSrc: string;
@@ -7,16 +9,30 @@ export type TechnologyProps = {
 };
 
 export function Technology({ imgSrc, name }: TechnologyProps) {
+  const { isLightMode } = useColorContext();
+
   return (
-    <figure className={styles.figure}>
+    <figure
+      className={clsx(styles.figure, {
+        [styles["figure--light-mode"]]: isLightMode,
+      })}
+    >
       <Image
-        className={styles.image}
+        className={clsx(styles.image, {
+          [styles["image--light-mode"]]: isLightMode,
+        })}
         alt={`${name} logo`}
         src={imgSrc}
         width={64}
         height={64}
       />
-      <figcaption className={styles.figcaption}>{name}</figcaption>
+      <figcaption
+        className={clsx(styles.figcaption, {
+          [styles["figcaption--light-mode"]]: isLightMode,
+        })}
+      >
+        {name}
+      </figcaption>
     </figure>
   );
 }

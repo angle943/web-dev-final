@@ -122,9 +122,17 @@ body {
   outline-width: 1px;
 }
 
+.body--light-mode {
+  background: rgb(var(--gray-100));
+}
+
 *:focus {
   outline: rgb(var(--yellow-300)) solid 2px;
   transition: outline-width 250ms linear;
+}
+
+.body--light-mode *:focus {
+  outline-color: rgb(var(--yellow-500));
 }
 
 h1 {

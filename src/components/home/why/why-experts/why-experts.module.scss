@@ -21,7 +21,17 @@
   padding: 4rem;
   position: relative;
   z-index: 1;
-  transition: background-color 300ms ease-in 1000ms;
+  transition: all 750ms ease-in 1000ms;
+
+  &--light-mode {
+    background-color: rgba(var(--gray-50), 0.05);
+    color: rgb(var(--gray-100));
+
+    &--in-view {
+      background-color: rgba(var(--gray-950), 0.5);
+      color: rgb(var(--gray-50));
+    }
+  }
 }
 
 .in-view {

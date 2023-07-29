@@ -7,6 +7,10 @@
   display: flex;
   gap: 5rem;
   align-items: center;
+
+  &--light-mode {
+    border-color: rgba(var(--gray-300), 0.5);
+  }
 }
 
 .text-section {
@@ -17,10 +21,18 @@
 
 .testimony {
   color: rgb(var(--gray-300));
+
+  &--light-mode {
+    color: rgb(var(--gray-950));
+  }
 }
 
 .name {
   color: rgb(var(--gray-500));
+
+  &--light-mode {
+    color: rgb(var(--gray-600));
+  }
 }
 
 .company-image {
@@ -28,4 +40,8 @@
   filter: brightness(75%);
   height: 2.5rem;
   object-position: left;
+
+  &--light-mode {
+    filter: unset;
+  }
 }

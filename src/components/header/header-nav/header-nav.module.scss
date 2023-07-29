@@ -1,4 +1,28 @@
 .nav {
+  align-items: center;
   display: flex;
   gap: 1.5rem;
+}
+
+.light {
+  border-radius: 50%;
+  color: rgb(var(--gray-50));
+  margin-left: 1.5rem;
+  transition: all 100ms ease-in;
+  font-size: var(--font-size-xl);
+  padding: 0.5rem;
+
+  &:hover {
+    background-color: rgb(var(--gray-50));
+    color: rgb(var(--gray-950));
+  }
+
+  &.light--light-mode {
+    color: rgb(var(--gray-950));
+
+    &:hover {
+      background-color: rgb(var(--gray-950));
+      color: rgb(var(--gray-50));
+    }
+  }
 }

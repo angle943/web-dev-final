@@ -14,6 +14,10 @@
   justify-content: flex-end;
   display: flex;
   gap: 2rem;
+
+  &--light-mode {
+    color: rgb(var(--gray-950));
+  }
 }
 
 .button {
@@ -31,5 +35,14 @@
 
   &:active {
     transform: scale(0.9);
+  }
+
+  &--light-mode {
+    border: 1px solid rgb(var(--gray-950));
+
+    &:disabled {
+      border-color: rgb(var(--gray-300));
+      color: rgb(var(--gray-300));
+    }
   }
 }

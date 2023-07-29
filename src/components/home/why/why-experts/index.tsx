@@ -5,10 +5,12 @@ import { UnderlinedText } from "@/components/underlined-text";
 import clsx from "clsx";
 import { useState } from "react";
 import { useEventListener } from "usehooks-ts";
+import { useColorContext } from "@/context/color-context";
 
 const elementId = "why-experts";
 
 export function WhyExperts() {
+  const { isLightMode } = useColorContext();
   const [elIsInView, setElIsInView] = useState<boolean>(false);
 
   useEventListener("scroll", () => {
@@ -38,7 +40,11 @@ export function WhyExperts() {
         height={576}
       />
       <section
-        className={clsx(styles.section, { [styles["in-view"]]: elIsInView })}
+        className={clsx(styles.section, {
+          [styles["in-view"]]: !isLightMode && elIsInView,
+          [styles["section--light-mode"]]: isLightMode,
+          [styles["section--light-mode--in-view"]]: isLightMode && elIsInView,
+        })}
       >
         <h4 className={styles.title}>
           Learn From <br />

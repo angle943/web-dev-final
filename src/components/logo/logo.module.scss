@@ -1,7 +1,12 @@
 .logo {
+  color: rgb(var(--gray-50));
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 800;
+
+  &--light-mode {
+    color: rgb(var(--gray-950));
+  }
 }
 
 .logo-thin {

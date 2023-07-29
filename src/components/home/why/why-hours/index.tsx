@@ -1,12 +1,27 @@
 "use client";
 import styles from "./why-hours.module.scss";
+import { useColorContext } from "@/context/color-context";
+import clsx from "clsx";
 
 const elementId = "why-hours";
 
 export function WhyHours() {
+  const { isLightMode } = useColorContext();
+
   return (
-    <div className={styles.container} id={elementId}>
-      <span className={styles.number}>500+</span>
+    <div
+      className={clsx(styles.container, {
+        [styles["container--light-mode"]]: isLightMode,
+      })}
+      id={elementId}
+    >
+      <span
+        className={clsx(styles.number, {
+          [styles["number--light-mode"]]: isLightMode,
+        })}
+      >
+        500+
+      </span>
       <p className="text-xl">hours of content.</p>
     </div>
   );

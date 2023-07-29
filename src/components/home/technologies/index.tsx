@@ -1,11 +1,23 @@
 import styles from "./technologies.module.scss";
 import { Container } from "@/components/container";
 import { Technology } from "@/components/home/technologies/technology";
+import { useColorContext } from "@/context/color-context";
+import clsx from "clsx";
 
 export function Technologies() {
+  const { isLightMode } = useColorContext();
+
   return (
-    <div className={styles.backdrop}>
-      <Container className={styles.container}>
+    <div
+      className={clsx(styles.backdrop, {
+        [styles["backdrop--light-mode"]]: isLightMode,
+      })}
+    >
+      <Container
+        className={clsx(styles.container, {
+          [styles["container--light-mode"]]: isLightMode,
+        })}
+      >
         <div className={styles.track}>
           <Technology name="Javascript" imgSrc="/logos/javascript.png" />
           <Technology name="Typescript" imgSrc="/logos/typescript.png" />

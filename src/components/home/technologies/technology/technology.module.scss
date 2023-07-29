@@ -6,8 +6,16 @@
       filter: unset;
     }
 
-    .figcaption {
+    figcaption {
       color: rgb(var(--gray-50));
+    }
+  }
+
+  &--light-mode {
+    &:hover {
+      figcaption {
+        color: rgb(var(--gray-900));
+      }
     }
   }
 }
@@ -17,6 +25,14 @@
   height: 4rem;
   transition: filter 250ms ease-in;
   width: 4rem;
+
+  &--light-mode {
+    filter: brightness(100%) grayscale(50%);
+
+    &:hover {
+      filter: brightness(175%);
+    }
+  }
 }
 
 .figcaption {
@@ -25,4 +41,8 @@
   position: absolute;
   transform: translateX(-50%);
   transition: color 250ms ease-in;
+
+  &--light-mode {
+    color: rgb(var(--gray-500));
+  }
 }

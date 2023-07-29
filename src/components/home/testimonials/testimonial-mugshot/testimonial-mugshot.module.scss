@@ -9,4 +9,9 @@
 .image {
   filter: grayscale(75%);
   opacity: 0.8;
+
+  &--light-mode {
+    filter: unset;
+    opacity: unset;
+  }
 }

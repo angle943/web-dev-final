@@ -1,5 +1,9 @@
 .backdrop {
   background-color: rgb(var(--gray-900));
+
+  &--light-mode {
+    background-color: unset;
+  }
 }
 
 // https://codepen.io/studiojvla/pen/qVbQqW
@@ -32,6 +36,17 @@
     right: 0;
     top: 0;
     transform: rotateZ(180deg);
+  }
+
+  &--light-mode {
+    &::before,
+    &::after {
+      background: linear-gradient(
+        to right,
+        rgba(var(--gray-100), 1) 0%,
+        rgba(var(--gray-100), 0) 100%
+      );
+    }
   }
 }
 

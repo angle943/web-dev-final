@@ -15,10 +15,18 @@
 
 .title {
   color: rgb(var(--gray-50));
+
+  &--light-mode {
+    color: rgb(var(--gray-950));
+  }
 }
 
 .description {
   color: rgb(var(--gray-400));
+
+  &--light-mode {
+    color: rgb(var(--gray-600));
+  }
 }
 
 .toggle-container {
@@ -29,6 +37,10 @@
   position: relative;
   border-radius: 1.25rem;
   overflow: hidden;
+
+  &--light-mode {
+    background-color: rgb(var(--gray-200));
+  }
 }
 
 .toggle-white {
@@ -40,6 +52,10 @@
   width: 8rem;
   height: 100%;
   transition: transform 300ms linear;
+
+  &--light-mode {
+    background-color: rgb(var(--gray-950));
+  }
 }
 
 .toggle-white--team {
@@ -56,10 +72,18 @@
   width: 8rem;
   transition: color 300ms linear;
   z-index: 2;
+
+  &--light-mode {
+    color: rgb(var(--gray-950));
+  }
 }
 
 .toggle-option--selected {
   color: rgb(var(--gray-950));
+
+  &--light-mode {
+    color: rgb(var(--gray-50));
+  }
 }
 
 .card-section {

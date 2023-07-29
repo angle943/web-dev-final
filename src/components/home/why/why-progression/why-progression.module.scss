@@ -4,6 +4,10 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+
+  &--light-mode {
+    color: rgb(var(--gray-900));
+  }
 }
 
 .figure {
@@ -23,25 +27,20 @@
   width: 100%;
   top: 50%;
   z-index: 1;
-}
 
-//@keyframes fillBar {
-//  0% {
-//    width: 0;
-//  }
-//  75% {
-//    width: 100%;
-//  }
-//  100% {
-//    width: 100%;
-//  }
-//}
+  &--light-mode {
+    background-color: rgb(var(--gray-300));
+  }
+}
 
 .filled-line {
   background-color: rgb(var(--blue-700));
-  //animation: fillBar 8s linear infinite;
   top: 50%;
   z-index: 2;
+
+  &--light-mode {
+    background-color: rgb(var(--blue-600));
+  }
 }
 
 .dot {
@@ -49,6 +48,10 @@
   border-radius: 50%;
   height: 2rem;
   width: 2rem;
+
+  &--light-mode {
+    background-color: rgb(var(--gray-300));
+  }
 }
 
 .section {

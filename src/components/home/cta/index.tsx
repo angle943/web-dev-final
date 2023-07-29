@@ -4,9 +4,10 @@ import styles from "./cta.module.scss";
 import clsx from "clsx";
 import { useState } from "react";
 import { CtaCard } from "@/components/home/cta/cta-card";
-import { ButtonMain } from "@/components/buttons/button-main";
+import { useColorContext } from "@/context/color-context";
 
 export function Cta() {
+  const { isLightMode } = useColorContext();
   const [individualPlanIsSelected, setIndividualPlanIsSelected] =
     useState<boolean>(true);
 
@@ -18,31 +19,53 @@ export function Cta() {
     <section className={styles.wrapper}>
       <Container>
         <div className={styles["title-section"]}>
-          <h5 className={styles.title}>
+          <h5
+            className={clsx(styles.title, {
+              [styles["title--light-mode"]]: isLightMode,
+            })}
+          >
             Master your craft.
             <br /> Become a true professional.
           </h5>
-          <p className={clsx(styles.description, "text-lg")}>
+          <p
+            className={clsx(styles.description, "text-lg", {
+              [styles["description--light-mode"]]: isLightMode,
+            })}
+          >
             Get access to 50+ quality courses and level up your skills as a
             developer, whether you are a beginner, intermediate, or even a
             seasoned veteran. Join the community today.
           </p>
-          <div className={styles["toggle-container"]} onClick={togglePlan}>
+          <div
+            className={clsx(styles["toggle-container"], {
+              [styles["toggle-container--light-mode"]]: isLightMode,
+            })}
+            onClick={togglePlan}
+          >
             <div
               className={clsx(styles["toggle-white"], {
                 [styles["toggle-white--team"]]: !individualPlanIsSelected,
+                [styles["toggle-white--light-mode"]]: isLightMode,
               })}
             />
             <span
               className={clsx("text-lg", styles["toggle-option"], {
-                [styles["toggle-option--selected"]]: individualPlanIsSelected,
+                [styles["toggle-option--light-mode"]]: isLightMode,
+                [styles["toggle-option--selected"]]:
+                  !isLightMode && individualPlanIsSelected,
+                [styles["toggle-option--selected--light-mode"]]:
+                  isLightMode && individualPlanIsSelected,
               })}
             >
               Individual
             </span>
             <span
               className={clsx("text-lg", styles["toggle-option"], {
-                [styles["toggle-option--selected"]]: !individualPlanIsSelected,
+                [styles["toggle-option--light-mode"]]: isLightMode,
+                [styles["toggle-option--selected"]]:
+                  !isLightMode && !individualPlanIsSelected,
+                [styles["toggle-option--selected--light-mode"]]:
+                  isLightMode && !individualPlanIsSelected,
               })}
             >
               Team

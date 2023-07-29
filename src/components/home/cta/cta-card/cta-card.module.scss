@@ -4,6 +4,12 @@
   color: rgb(var(--gray-950));
   flex: 1;
   padding: 4rem 3rem;
+
+  &--light-mode {
+    background: rgb(var(--gray-50));
+    box-shadow: 0 0 0.5rem rgba(var(--gray-900), 0.5);
+    color: rgb(var(--gray-950));
+  }
 }
 
 .title {
@@ -42,4 +48,8 @@
       bottom: 0;
     }
   }
+
+  //&--light-mode {
+  //  color: rgb(var(--gray-100));
+  //}
 }

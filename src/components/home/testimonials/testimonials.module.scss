@@ -1,6 +1,10 @@
 .container {
   color: rgb(var(--gray-50));
   margin-top: 12rem;
+
+  &--light-mode {
+    color: rgb(var(--gray-950));
+  }
 }
 
 .title {

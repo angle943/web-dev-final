@@ -1,6 +1,7 @@
 import styles from "./cta-card.module.scss";
 import clsx from "clsx";
 import { ButtonMain } from "@/components/buttons/button-main";
+import { useColorContext } from "@/context/color-context";
 
 export type CtaCardProps = {
   description: string;
@@ -15,8 +16,14 @@ export function CtaCard({
   priceRate,
   title,
 }: CtaCardProps) {
+  const { isLightMode } = useColorContext();
+
   return (
-    <div className={styles.card}>
+    <div
+      className={clsx(styles.card, {
+        [styles["card--light-mode"]]: isLightMode,
+      })}
+    >
       <h5 className={styles.title}>{title}</h5>
       <p className={clsx(styles.description, "text-lg")}>{description}</p>
       <div className={styles["pricing-section"]}>
@@ -26,7 +33,11 @@ export function CtaCard({
       <ButtonMain variant="primary" onClick={() => {}}>
         Sign up now
       </ButtonMain>
-      <ul className={styles.list}>
+      <ul
+        className={clsx(styles.list, {
+          [styles["list--light-mode"]]: isLightMode,
+        })}
+      >
         <li>50+ courses</li>
         <li>Learning paths for all skill levels</li>
         <li>10000+ students</li>

@@ -6,6 +6,8 @@ import {
 import { HiArrowLeft, HiArrowRight } from "react-icons/hi";
 import styles from "./testimonial-carousel.module.scss";
 import { MouseEventHandler, useEffect, useRef, useState } from "react";
+import clsx from "clsx";
+import { useColorContext } from "@/context/color-context";
 
 const picPath = "/home/testimonials/";
 const testimonyData: TestimonialProps[] = [
@@ -19,6 +21,7 @@ const testimonyData: TestimonialProps[] = [
     ],
     companyName: "Amazon",
     companySrc: `${picPath}amazon.png`,
+    companySrcWhite: `${picPath}amazon-white.png`,
   },
   {
     profileImgSrc: `${picPath}person2.jpg`,
@@ -30,6 +33,7 @@ const testimonyData: TestimonialProps[] = [
     ],
     companyName: "Uber",
     companySrc: `${picPath}uber.png`,
+    companySrcWhite: `${picPath}uber-white.png`,
   },
   {
     profileImgSrc: `${picPath}person3.jpg`,
@@ -47,6 +51,7 @@ const width = 1440;
 const gap = 160;
 
 export function TestimonialCarousel() {
+  const { isLightMode } = useColorContext();
   const [visible, setVisible] = useState<number>(0);
   const carouselRef = useRef<HTMLDivElement>(null);
   const leftDisabled = visible === 0;
@@ -81,16 +86,24 @@ export function TestimonialCarousel() {
           <Testimonial key={data.fullName} {...data} />
         ))}
       </div>
-      <div className={styles.buttons}>
+      <div
+        className={clsx(styles.buttons, {
+          [styles["buttons--light-mode"]]: isLightMode,
+        })}
+      >
         <button
-          className={styles.button}
+          className={clsx(styles.button, {
+            [styles["button--light-mode"]]: isLightMode,
+          })}
           disabled={leftDisabled}
           onClick={handleLeftClick}
         >
           <HiArrowLeft size="1.5rem" />
         </button>
         <button
-          className={styles.button}
+          className={clsx(styles.button, {
+            [styles["button--light-mode"]]: isLightMode,
+          })}
           disabled={rightDisabled}
           onClick={handleRightClick}
         >

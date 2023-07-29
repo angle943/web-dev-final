@@ -15,4 +15,14 @@
     );
     z-index: -1;
   }
+
+  &--light-mode {
+    &::before {
+      background: linear-gradient(
+        to right,
+        rgba(var(--blue-600), 0.9),
+        rgba(var(--blue-600), 0.1)
+      );
+    }
+  }
 }

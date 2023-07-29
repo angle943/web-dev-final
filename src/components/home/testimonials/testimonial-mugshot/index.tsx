@@ -1,6 +1,7 @@
 import Image from "next/image";
 import clsx from "clsx";
 import styles from "./testimonial-mugshot.module.scss";
+import { useColorContext } from "@/context/color-context";
 
 export type TestimonialMugshotProps = {
   alt: string;
@@ -13,10 +14,14 @@ export function TestimonialMugshot({
   className,
   src,
 }: TestimonialMugshotProps) {
+  const { isLightMode } = useColorContext();
+
   return (
     <div className={styles.wrapper}>
       <Image
-        className={clsx(styles.image, className)}
+        className={clsx(styles.image, className, {
+          [styles["image--light-mode"]]: isLightMode,
+        })}
         src={src}
         alt={alt}
         width={336}

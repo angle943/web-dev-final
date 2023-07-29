@@ -3,6 +3,7 @@ import { ReactNode, useRef } from "react";
 import clsx from "clsx";
 import styles from "./why-cell.module.scss";
 import { useEventListener } from "usehooks-ts";
+import { useColorContext } from "@/context/color-context";
 
 export type WhyCellProps = {
   children: ReactNode;
@@ -11,6 +12,7 @@ export type WhyCellProps = {
 
 export function WhyCell({ children, className }: WhyCellProps) {
   const elRef = useRef<HTMLElement>(null);
+  const { isLightMode } = useColorContext();
 
   useEventListener("scroll", () => {
     const { current } = elRef;
@@ -25,7 +27,12 @@ export function WhyCell({ children, className }: WhyCellProps) {
   });
 
   return (
-    <section className={clsx(styles.cell, className)} ref={elRef}>
+    <section
+      className={clsx(styles.cell, className, {
+        [styles["cell--light-mode"]]: isLightMode,
+      })}
+      ref={elRef}
+    >
       {children}
     </section>
   );
