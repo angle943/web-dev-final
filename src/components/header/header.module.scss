@@ -108,14 +108,16 @@
 .dialog {
   background-color: rgb(var(--gray-700));
   display: none;
-  height: 100vh;
+  min-height: 100vh;
+  max-height: 100vh;
   left: 0;
   padding: 6rem 2rem;
-  position: fixed;
+  position: absolute;
   top: 0;
   transform: translateX(-100%);
   transition: transform 300ms ease-in;
   width: 100%;
+  overflow: auto;
 
   &--light-mode {
     background-color: rgb(var(--gray-300));
