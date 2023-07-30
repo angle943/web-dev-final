@@ -18,7 +18,7 @@ export function WhyCell({ children, className }: WhyCellProps) {
     const { current } = elRef;
 
     if (current) {
-      const { innerHeight } = window;
+      const innerHeight = window?.innerHeight || 0;
       const { top } = current.getBoundingClientRect();
 
       const opacity = Math.min(Math.max(innerHeight - top, 0) / 5, 100) / 100;

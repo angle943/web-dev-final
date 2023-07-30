@@ -20,7 +20,7 @@ export function WhyExperts() {
       return;
     }
 
-    const { innerHeight } = window;
+    const innerHeight = window?.innerHeight || 0;
     const { top } = el.getBoundingClientRect();
 
     if (top > 0 && top < innerHeight) {
