@@ -108,8 +108,7 @@
 .dialog {
   background-color: rgb(var(--gray-700));
   display: none;
-  min-height: 100vh;
-  max-height: 100vh;
+  height: max(calc(8.625rem + 2 * 6rem), 100vh);
   left: 0;
   padding: 6rem 2rem;
   position: absolute;
