@@ -54,28 +54,28 @@ export function TestimonialCarousel() {
   const leftDisabled = visible === 0;
   const rightDisabled = visible === testimonyData.length - 1;
 
-  let elWidth: number;
-  const gap = 10 * 16;
-  if (window?.innerWidth > 96 * 16) {
-    elWidth = (96 - 4) * 16;
-  } else if (window?.innerWidth > 80 * 16) {
-    elWidth = (80 - 4) * 16;
-  } else if (window?.innerWidth > 64 * 16) {
-    elWidth = (64 - 4) * 16;
-  } else if (window?.innerWidth > 48 * 16) {
-    elWidth = (48 - 4) * 16;
-  } else {
-    elWidth = document?.documentElement.clientWidth - 4 * 16;
-  }
-
   useEffect(() => {
     if (carouselRef.current) {
+      let elWidth: number;
+      const gap = 10 * 16;
+      if (window?.innerWidth > 96 * 16) {
+        elWidth = (96 - 4) * 16;
+      } else if (window?.innerWidth > 80 * 16) {
+        elWidth = (80 - 4) * 16;
+      } else if (window?.innerWidth > 64 * 16) {
+        elWidth = (64 - 4) * 16;
+      } else if (window?.innerWidth > 48 * 16) {
+        elWidth = (48 - 4) * 16;
+      } else {
+        elWidth = document?.documentElement.clientWidth - 4 * 16;
+      }
+
       carouselRef.current.scroll({
         left: (elWidth + gap) * visible,
         behavior: "smooth",
       });
     }
-  }, [elWidth, gap, carouselRef, visible]);
+  }, [carouselRef, visible]);
 
   const handleLeftClick: MouseEventHandler<HTMLButtonElement> = () => {
     if (leftDisabled) return;
