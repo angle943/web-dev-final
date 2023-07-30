@@ -5,11 +5,20 @@ import styles from "./header-nav.module.scss";
 import { useColorContext } from "@/context/color-context";
 import clsx from "clsx";
 
-export function HeaderNav() {
+export type HeaderNavProps = {
+  className?: string;
+  isMobile?: boolean;
+};
+
+export function HeaderNav({ className, isMobile }: HeaderNavProps) {
   const { isLightMode, toggleLightMode } = useColorContext();
 
   return (
-    <nav className={styles.nav}>
+    <nav
+      className={clsx(styles.nav, className, {
+        [styles["nav--mobile"]]: isMobile,
+      })}
+    >
       <HeaderNavLink label="Courses" href={PageRoute.courses} />
       <HeaderNavLink label="Blog" href={PageRoute.blog} />
       <HeaderNavLink label="Play" href={PageRoute.play} />

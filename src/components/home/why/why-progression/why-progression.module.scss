@@ -13,6 +13,19 @@
 .figure {
   position: relative;
   flex: 1;
+  min-height: 9.75rem;
+
+  @media only screen and (max-width: 80rem) {
+    min-height: 8.5rem;
+  }
+
+  @media only screen and (max-width: 64rem) {
+    min-height: 7rem;
+  }
+
+  @media only screen and (max-width: 48rem) {
+    min-height: 5.5rem;
+  }
 }
 
 .line {
@@ -20,6 +33,10 @@
   position: absolute;
   border-radius: 0.5rem;
   transform: translateY(-50%);
+
+  @media only screen and (max-width: 64rem) {
+    height: 0.75rem;
+  }
 }
 
 .blank-line {
@@ -49,6 +66,11 @@
   height: 2rem;
   width: 2rem;
 
+  @media only screen and (max-width: 64rem) {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
   &--light-mode {
     background-color: rgb(var(--gray-300));
   }
@@ -59,6 +81,10 @@
   transform: translate(-50%, -1rem);
   top: 50%;
   z-index: 3;
+
+  @media only screen and (max-width: 64rem) {
+    transform: translate(-50%, -0.75rem);
+  }
 }
 
 .html {
@@ -68,6 +94,10 @@
 .label {
   margin-top: 1rem;
   display: block;
+
+  @media only screen and (max-width: 64rem) {
+    margin-top: 0.5rem;
+  }
 }
 
 .css {

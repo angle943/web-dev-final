@@ -1,23 +1,44 @@
 .container {
   margin-bottom: 12rem;
+
+  @media only screen and (max-width: 64rem) {
+    margin-bottom: 8rem;
+  }
+
+  @media only screen and (max-width: 48rem) {
+    margin-bottom: 6rem;
+  }
 }
 
 .hr {
   border-color: rgb(var(--gray-400));
   border-top-width: 2px;
   margin-bottom: 5rem;
+
+  @media only screen and (max-width: 48rem) {
+    margin-bottom: 3rem;
+  }
 }
 
 .footer {
   display: flex;
   flex-direction: column;
   gap: 6rem;
+
+  @media only screen and (max-width: 64rem) {
+    gap: 4rem;
+  }
 }
 
 .main {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+
+  @media only screen and (max-width: 48rem) {
+    flex-direction: column;
+    gap: 2rem;
+  }
 }
 
 .links {
@@ -25,12 +46,20 @@
   gap: 4rem;
   display: flex;
   flex-shrink: 0;
+  flex-wrap: wrap;
 }
 
 .bottom {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+
+  @media only screen and (max-width: 64rem) {
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
 }
 
 .socials {
@@ -38,6 +67,10 @@
   display: flex;
   gap: 1rem;
   color: rgb(var(--gray-50));
+
+  @media only screen and (max-width: 48rem) {
+    flex-wrap: wrap;
+  }
 
   & > a {
     border-radius: 50%;
@@ -47,6 +80,10 @@
     font-size: 1.5rem;
     padding: 0.5rem;
     transition: all 100ms ease-in;
+
+    @media only screen and (max-width: 80rem) {
+      font-size: 1rem;
+    }
 
     &:hover {
       border-color: rgb(var(--gray-950));
@@ -71,12 +108,27 @@
 .bottom-right {
   display: flex;
   gap: 3rem;
+
+  @media only screen and (max-width: 80rem) {
+    gap: 1.5rem;
+  }
+
+  @media only screen and (max-width: 48rem) {
+    flex-direction: column;
+  }
 }
 
 .legals {
   color: rgb(var(--gray-400));
   display: flex;
   gap: 1rem;
+
+  @media only screen and (max-width: 48rem) {
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
 
   &--light-mode {
     color: rgb(var(--gray-500));

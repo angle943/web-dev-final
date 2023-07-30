@@ -1,6 +1,14 @@
 .container {
   padding: 3rem;
   position: relative;
+
+  @media only screen and (max-width: 64rem) {
+    padding: 1.5rem;
+  }
+
+  @media only screen and (max-width: 48rem) {
+    padding: 2rem 2.5rem;
+  }
 }
 
 .image {
@@ -15,6 +23,29 @@
     color: rgba(var(--blue-100));
     filter: unset;
   }
+
+  @media only screen and (max-width: 96rem) {
+    width: 25rem;
+    height: 25rem;
+  }
+
+  @media only screen and (max-width: 80rem) {
+    width: 20rem;
+    height: 20rem;
+  }
+
+  @media only screen and (max-width: 64rem) {
+    width: 15rem;
+    height: 15rem;
+  }
+
+  @media only screen and (max-width: 48rem) {
+    width: 20rem;
+    height: 20rem;
+    left: unset;
+    right: 0;
+    top: -20%;
+  }
 }
 
 .text {
@@ -23,6 +54,14 @@
   color: transparent;
   position: relative;
   z-index: 1;
+
+  @media only screen and (max-width: 48rem) {
+    width: 40%;
+  }
+
+  @media only screen and (max-width: 40rem) {
+    width: 50%;
+  }
 
   &--light-mode {
     background: linear-gradient(rgb(var(--blue-900)), rgb(var(--blue-500)));

@@ -6,6 +6,26 @@
   &--light-mode {
     background: unset;
   }
+
+  @media only screen and (max-width: 80rem) {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  @media only screen and (max-width: 64rem) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  @media only screen and (max-width: 48rem) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  @media only screen and (max-width: 40rem) {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
 }
 
 .video {

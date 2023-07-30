@@ -4,6 +4,21 @@
   width: 21rem;
   height: 21rem;
   overflow: hidden;
+
+  @media only screen and (max-width: 80rem) {
+    width: 18rem;
+    height: 18rem;
+  }
+
+  @media only screen and (max-width: 64rem) {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  @media only screen and (max-width: 40rem) {
+    width: 5rem;
+    height: 5rem;
+  }
 }
 
 .image {

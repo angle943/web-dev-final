@@ -1,5 +1,23 @@
 .container {
   margin-left: auto;
   margin-right: auto;
-  max-width: 90rem;
+  max-width: calc(96rem - 4rem);
+
+  @media only screen and (max-width: 96rem) {
+    max-width: calc(80rem - 4rem);
+  }
+
+  @media only screen and (max-width: 80rem) {
+    max-width: calc(64rem - 4rem);
+  }
+
+  @media only screen and (max-width: 64rem) {
+    max-width: calc(48rem - 4rem);
+  }
+
+  @media only screen and (max-width: 48rem) {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    max-width: unset;
+  }
 }

@@ -2,6 +2,16 @@
   align-items: center;
   display: flex;
   gap: 1.5rem;
+
+  @media only screen and (max-width: 64rem) {
+    gap: 1rem;
+  }
+
+  @media only screen and (max-width: 48rem) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
 }
 
 .light {
@@ -11,6 +21,14 @@
   transition: all 100ms ease-in;
   font-size: var(--font-size-xl);
   padding: 0.5rem;
+
+  @media only screen and (max-width: 64rem) {
+    margin-left: 1rem;
+  }
+
+  @media only screen and (max-width: 48rem) {
+    margin-left: -0.5rem;
+  }
 
   &:hover {
     background-color: rgb(var(--gray-50));

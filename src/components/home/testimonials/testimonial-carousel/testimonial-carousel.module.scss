@@ -1,5 +1,4 @@
 .container {
-  margin-bottom: 10rem;
 }
 
 .carousel {
@@ -7,6 +6,10 @@
   gap: 10rem;
   margin-bottom: 3rem;
   overflow-x: hidden;
+
+  @media only screen and (max-width: 64rem) {
+    margin-bottom: 1.5rem;
+  }
 }
 
 .buttons {
@@ -17,6 +20,10 @@
 
   &--light-mode {
     color: rgb(var(--gray-950));
+  }
+
+  @media only screen and (max-width: 64rem) {
+    justify-content: center;
   }
 }
 

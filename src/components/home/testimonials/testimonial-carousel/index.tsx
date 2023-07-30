@@ -47,9 +47,6 @@ const testimonyData: TestimonialProps[] = [
   },
 ];
 
-const width = 1440;
-const gap = 160;
-
 export function TestimonialCarousel() {
   const { isLightMode } = useColorContext();
   const [visible, setVisible] = useState<number>(0);
@@ -57,15 +54,28 @@ export function TestimonialCarousel() {
   const leftDisabled = visible === 0;
   const rightDisabled = visible === testimonyData.length - 1;
 
+  let elWidth: number;
+  const gap = 10 * 16;
+  if (window.innerWidth > 96 * 16) {
+    elWidth = (96 - 4) * 16;
+  } else if (window.innerWidth > 80 * 16) {
+    elWidth = (80 - 4) * 16;
+  } else if (window.innerWidth > 64 * 16) {
+    elWidth = (64 - 4) * 16;
+  } else if (window.innerWidth > 48 * 16) {
+    elWidth = (48 - 4) * 16;
+  } else {
+    elWidth = document.documentElement.clientWidth - 4 * 16;
+  }
+
   useEffect(() => {
     if (carouselRef.current) {
-      console.log("HAHA");
       carouselRef.current.scroll({
-        left: (width + gap) * visible,
+        left: (elWidth + gap) * visible,
         behavior: "smooth",
       });
     }
-  }, [carouselRef, visible]);
+  }, [elWidth, gap, carouselRef, visible]);
 
   const handleLeftClick: MouseEventHandler<HTMLButtonElement> = () => {
     if (leftDisabled) return;

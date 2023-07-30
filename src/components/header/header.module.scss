@@ -8,8 +8,125 @@
   padding-left: 3rem;
   padding-right: 3rem;
 
+  @media only screen and (max-width: 48rem) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    height: 4rem;
+  }
+
   &--light-mode {
     background-color: rgb(var(--gray-100));
     color: rgb(var(--gray-950));
+  }
+}
+
+.logo {
+  @media only screen and (max-width: 48rem) {
+    position: relative;
+    z-index: 100;
+  }
+}
+
+.headerNav {
+  @media only screen and (max-width: 48rem) {
+    display: none;
+  }
+}
+
+.hamburger {
+  cursor: pointer;
+  display: none;
+  height: 1.5rem;
+  transform: rotate(0);
+  transition: 500ms ease-in-out;
+  width: 2rem;
+  z-index: 100;
+
+  @media only screen and (max-width: 48rem) {
+    display: block;
+  }
+
+  & span {
+    display: block;
+    position: absolute;
+    height: 0.3rem;
+    width: 100%;
+    background-color: rgb(var(--gray-50));
+    border-radius: 0.3rem;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0);
+    transition: 250ms ease-in-out;
+
+    &:nth-child(1) {
+      top: 0;
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      top: 0.6rem;
+    }
+
+    &:nth-child(4) {
+      top: 1.2rem;
+    }
+  }
+
+  &.open {
+    position: fixed;
+    top: 1.25rem;
+    right: 2.25rem;
+
+    & span:nth-child(1) {
+      top: 0.6rem;
+      width: 0;
+      left: 50%;
+    }
+
+    & span:nth-child(2) {
+      transform: rotate(45deg);
+    }
+
+    & span:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+
+    & span:nth-child(4) {
+      top: 0.6rem;
+      width: 0;
+      left: 50%;
+    }
+  }
+
+  &--light-mode {
+    & span {
+      background-color: rgb(var(--gray-950));
+    }
+  }
+}
+
+.dialog {
+  background-color: rgb(var(--gray-700));
+  display: none;
+  height: 100vh;
+  left: 0;
+  padding: 6rem 2rem;
+  position: fixed;
+  top: 0;
+  transform: translateX(-100%);
+  transition: transform 300ms ease-in;
+  width: 100%;
+
+  &--light-mode {
+    background-color: rgb(var(--gray-300));
+  }
+
+  @media only screen and (max-width: 48rem) {
+    display: flex;
+    z-index: 10;
+  }
+
+  &--active {
+    transform: translateX(0);
   }
 }

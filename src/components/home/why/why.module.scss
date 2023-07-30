@@ -3,6 +3,23 @@
   padding-top: 8rem;
   padding-bottom: 8rem;
 
+  @media only screen and (max-width: 80rem) {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  @media only screen and (max-width: 64rem) {
+    background: linear-gradient(rgb(var(--gray-900)) 90%, rgb(var(--gray-950)));
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+  }
+
+  @media only screen and (max-width: 48rem) {
+    background: linear-gradient(rgb(var(--gray-900)) 95%, rgb(var(--gray-950)));
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+  }
+
   &--light-mode {
     background: unset;
   }
@@ -22,29 +39,97 @@
   grid-auto-rows: 18rem;
   grid-gap: 2rem;
   margin-top: 4rem;
+
+  @media only screen and (max-width: 96rem) {
+    grid-auto-rows: 16rem;
+  }
+
+  @media only screen and (max-width: 80rem) {
+    grid-auto-rows: 14rem;
+  }
+
+  @media only screen and (max-width: 64rem) {
+    grid-auto-rows: 12rem;
+    margin-top: 3rem;
+  }
+
+  @media only screen and (max-width: 48rem) {
+    grid-auto-rows: auto;
+    margin-top: 2rem;
+  }
 }
 
 .experts {
   grid-column: 1 / span 2;
   grid-row: 1 / span 2;
+
+  @media only screen and (max-width: 64rem) {
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 2;
+  }
+
+  @media only screen and (max-width: 48rem) {
+    grid-column: 1 / -1;
+    grid-row: 1 / span 2;
+  }
 }
 
 .hours {
   grid-column: 3 / span 1;
   grid-row: 1 / span 1;
+
+  @media only screen and (max-width: 64rem) {
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+  }
+
+  @media only screen and (max-width: 48rem) {
+    grid-column: 1 / -1;
+    grid-row: 3 / span 1;
+  }
 }
 
 .in-demand {
   grid-column: 3 / span 1;
   grid-row: 2 / span 1;
+
+  @media only screen and (max-width: 64rem) {
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
+  }
+
+  @media only screen and (max-width: 48rem) {
+    grid-column: 1 / -1;
+    grid-row: 4 / span 1;
+  }
 }
 
 .up-to-date {
   grid-column: 1 / span 1;
   grid-row: 3 / span 1;
+
+  @media only screen and (max-width: 64rem) {
+    grid-column: 3 / span 1;
+    grid-row: 3 / span 1;
+  }
+
+  @media only screen and (max-width: 48rem) {
+    grid-column: 1 / -1;
+    grid-row: 5 / span 1;
+  }
 }
 
 .progression {
   grid-column: 2 / span 2;
   grid-row: 3 / span 1;
+
+  @media only screen and (max-width: 64rem) {
+    grid-column: 1 / span 3;
+    grid-row: 4 / span 1;
+  }
+
+  @media only screen and (max-width: 48rem) {
+    grid-column: 1 / -1;
+    grid-row: 6 / span 1;
+  }
 }

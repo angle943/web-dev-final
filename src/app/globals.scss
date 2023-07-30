@@ -51,6 +51,8 @@
   --blue-900: 30, 58, 138;
   --blue-950: 23, 37, 84;
 
+  --font-size-3xm: 0.5rem;
+  --font-size-2xm: 0.625rem;
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
   --font-size-base: 1rem;
@@ -65,6 +67,8 @@
   --font-size-8xl: 6rem;
   --font-size-9xl: 8rem;
 
+  --line-height-3xm: 0.75rem;
+  --line-height-2xm: 0.875rem;
   --line-height-xs: 1rem;
   --line-height-sm: 1.25rem;
   --line-height-base: 1.5rem;
@@ -120,6 +124,13 @@ body {
   background: rgb(var(--gray-950));
   outline-style: none;
   outline-width: 1px;
+  scrollbar-gutter: stable;
+}
+
+.body--locked {
+  @media only screen and (max-width: 48rem) {
+    overflow: hidden;
+  }
 }
 
 .body--light-mode {
@@ -139,61 +150,231 @@ h1 {
   font-size: var(--font-size-8xl);
   line-height: var(--line-height-8xl);
   font-weight: var(--font-weight-bold);
+
+  @media only screen and (max-width: 96rem) {
+    font-size: var(--font-size-7xl);
+    line-height: var(--line-height-7xl);
+  }
+
+  @media only screen and (max-width: 80rem) {
+    font-size: var(--font-size-6xl);
+    line-height: var(--line-height-6xl);
+  }
+
+  @media only screen and (max-width: 64rem) {
+    font-size: var(--font-size-5xl);
+    line-height: var(--line-height-5xl);
+  }
+
+  @media only screen and (max-width: 40rem) {
+    font-size: var(--font-size-4xl);
+    line-height: var(--line-height-4xl);
+  }
 }
 
 h2 {
   font-size: var(--font-size-7xl);
   line-height: var(--line-height-7xl);
   font-weight: var(--font-weight-bold);
+
+  @media only screen and (max-width: 96rem) {
+    font-size: var(--font-size-6xl);
+    line-height: var(--line-height-6xl);
+  }
+
+  @media only screen and (max-width: 80rem) {
+    font-size: var(--font-size-5xl);
+    line-height: var(--line-height-5xl);
+  }
+
+  @media only screen and (max-width: 64rem) {
+    font-size: var(--font-size-4xl);
+    line-height: var(--line-height-4xl);
+  }
+
+  @media only screen and (max-width: 40rem) {
+    font-size: var(--font-size-3xl);
+    line-height: var(--line-height-3xl);
+  }
 }
 
 h3 {
   font-size: var(--font-size-6xl);
   line-height: var(--line-height-6xl);
   font-weight: var(--font-weight-bold);
+
+  @media only screen and (max-width: 96rem) {
+    font-size: var(--font-size-5xl);
+    line-height: var(--line-height-5xl);
+  }
+
+  @media only screen and (max-width: 80rem) {
+    font-size: var(--font-size-4xl);
+    line-height: var(--line-height-4xl);
+  }
+
+  @media only screen and (max-width: 64rem) {
+    font-size: var(--font-size-3xl);
+    line-height: var(--line-height-3xl);
+  }
+
+  @media only screen and (max-width: 40rem) {
+    font-size: var(--font-size-2xl);
+    line-height: var(--line-height-2xl);
+  }
 }
 
 h4 {
   font-size: var(--font-size-5xl);
   line-height: var(--line-height-5xl);
   font-weight: var(--font-weight-bold);
+
+  @media only screen and (max-width: 96rem) {
+    font-size: var(--font-size-4xl);
+    line-height: var(--line-height-4xl);
+  }
+
+  @media only screen and (max-width: 80rem) {
+    font-size: var(--font-size-3xl);
+    line-height: var(--line-height-3xl);
+  }
+
+  @media only screen and (max-width: 64rem) {
+    font-size: var(--font-size-2xl);
+    line-height: var(--line-height-2xl);
+  }
+
+  @media only screen and (max-width: 40rem) {
+    font-size: var(--font-size-xl);
+    line-height: var(--line-height-xl);
+  }
 }
 
 h5 {
   font-size: var(--font-size-4xl);
   line-height: var(--line-height-4xl);
   font-weight: var(--font-weight-bold);
+
+  @media only screen and (max-width: 96rem) {
+    font-size: var(--font-size-3xl);
+    line-height: var(--line-height-3xl);
+  }
+
+  @media only screen and (max-width: 80rem) {
+    font-size: var(--font-size-2xl);
+    line-height: var(--line-height-2xl);
+  }
+
+  @media only screen and (max-width: 64rem) {
+    font-size: var(--font-size-xl);
+    line-height: var(--line-height-xl);
+  }
+
+  @media only screen and (max-width: 40rem) {
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-lg);
+  }
 }
 
 h6 {
   font-size: var(--font-size-3xl);
   line-height: var(--line-height-3xl);
   font-weight: var(--font-weight-bold);
+
+  @media only screen and (max-width: 96rem) {
+    font-size: var(--font-size-2xl);
+    line-height: var(--line-height-2xl);
+  }
+
+  @media only screen and (max-width: 80rem) {
+    font-size: var(--font-size-xl);
+    line-height: var(--line-height-xl);
+  }
+
+  @media only screen and (max-width: 64rem) {
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-lg);
+  }
+
+  @media only screen and (max-width: 40rem) {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+  }
 }
 
 .text-xl {
   font-size: var(--font-size-xl);
   line-height: var(--line-height-xl);
+
+  @media only screen and (max-width: 80rem) {
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-lg);
+  }
+
+  @media only screen and (max-width: 40rem) {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+  }
 }
 
 .text-lg {
   font-size: var(--font-size-lg);
   line-height: var(--line-height-lg);
+
+  @media only screen and (max-width: 80rem) {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+  }
+
+  @media only screen and (max-width: 40rem) {
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-sm);
+  }
 }
 
 .text-base {
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
+
+  @media only screen and (max-width: 80rem) {
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-sm);
+  }
+
+  @media only screen and (max-width: 40rem) {
+    font-size: var(--font-size-xs);
+    line-height: var(--line-height-xs);
+  }
 }
 
 .text-sm {
   font-size: var(--font-size-sm);
   line-height: var(--line-height-sm);
+
+  @media only screen and (max-width: 80rem) {
+    font-size: var(--font-size-xs);
+    line-height: var(--line-height-xs);
+  }
+
+  @media only screen and (max-width: 40rem) {
+    font-size: var(--font-size-2xs);
+    line-height: var(--line-height-2xs);
+  }
 }
 
 .text-xs {
   font-size: var(--font-size-xs);
   line-height: var(--line-height-xs);
+
+  @media only screen and (max-width: 80rem) {
+    font-size: var(--font-size-2xs);
+    line-height: var(--line-height-2xs);
+  }
+
+  @media only screen and (max-width: 40rem) {
+    font-size: var(--font-size-3xs);
+    line-height: var(--line-height-3xs);
+  }
 }
 
 ::selection {

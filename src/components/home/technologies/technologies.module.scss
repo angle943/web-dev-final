@@ -13,6 +13,16 @@
   padding-top: 3rem;
   padding-bottom: 4rem;
 
+  @media only screen and (max-width: 80rem) {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
+
+  @media only screen and (max-width: 64rem) {
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+  }
+
   &::before,
   &::after {
     background: linear-gradient(
@@ -25,6 +35,10 @@
     position: absolute;
     width: 4rem;
     z-index: 1;
+
+    @media only screen and (max-width: 64rem) {
+      width: 2rem;
+    }
   }
 
   &::before {
@@ -50,11 +64,6 @@
   }
 }
 
-$animation-speed: 40s;
-$gap: 4rem;
-$logo-width: 4rem;
-$logo-count: 12;
-
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -64,9 +73,24 @@ $logo-count: 12;
   }
 }
 
+@keyframes scrollMd {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-3rem * 18 - 3rem * 18));
+  }
+}
+
 .track {
-  animation: scroll $animation-speed linear infinite;
+  animation: scroll 40s linear infinite;
   display: flex;
-  gap: $gap;
+  gap: 4rem;
   width: calc(4rem * 36 + 4rem * 35);
+
+  @media only screen and (max-width: 64rem) {
+    animation: scrollMd 40s linear infinite;
+    gap: 3rem;
+    width: calc(3rem * 36 + 3rem * 35);
+  }
 }

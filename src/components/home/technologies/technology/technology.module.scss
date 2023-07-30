@@ -26,11 +26,24 @@
   transition: filter 250ms ease-in;
   width: 4rem;
 
+  @media only screen and (max-width: 64rem) {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  @media only screen and (max-width: 48rem) {
+    filter: unset !important;
+  }
+
   &--light-mode {
     filter: brightness(100%) grayscale(50%);
 
     &:hover {
       filter: brightness(175%);
+    }
+
+    @media only screen and (max-width: 48rem) {
+      filter: unset !important;
     }
   }
 }
@@ -42,7 +55,15 @@
   transform: translateX(-50%);
   transition: color 250ms ease-in;
 
+  @media only screen and (max-width: 48rem) {
+    color: rgb(var(--gray-100));
+  }
+
   &--light-mode {
     color: rgb(var(--gray-500));
+
+    @media only screen and (max-width: 48rem) {
+      color: rgb(var(--gray-900));
+    }
   }
 }

@@ -1,7 +1,6 @@
 .card {
   border: 4px solid rgba(var(--gray-800), 0.5);
-  width: 90rem;
-  height: 31.5rem;
+  width: calc(96rem - 4rem);
   flex-shrink: 0;
   padding: 5rem;
   display: flex;
@@ -10,6 +9,28 @@
 
   &--light-mode {
     border-color: rgba(var(--gray-300), 0.5);
+  }
+
+  @media only screen and (max-width: 96rem) {
+    max-width: calc(80rem - 4rem);
+    padding: 4rem;
+  }
+
+  @media only screen and (max-width: 80rem) {
+    max-width: calc(64rem - 4rem);
+    padding: 3rem;
+  }
+
+  @media only screen and (max-width: 64rem) {
+    flex-direction: column;
+    max-width: calc(48rem - 4rem);
+    padding: 2rem;
+    gap: 1rem;
+  }
+
+  @media only screen and (max-width: 48rem) {
+    max-width: calc(100vw - 14px - 4rem);
+    min-height: 30rem;
   }
 }
 
@@ -43,5 +64,9 @@
 
   &--light-mode {
     filter: unset;
+  }
+
+  @media only screen and (max-width: 48rem) {
+    display: none;
   }
 }

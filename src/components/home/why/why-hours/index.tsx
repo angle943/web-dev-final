@@ -22,7 +22,7 @@ export function WhyHours() {
       >
         500+
       </span>
-      <p className="text-xl">hours of content.</p>
+      <p className={clsx(styles.text, "text-xl")}>hours of content.</p>
     </div>
   );
 }

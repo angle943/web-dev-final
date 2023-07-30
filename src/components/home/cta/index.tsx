@@ -19,14 +19,14 @@ export function Cta() {
     <section className={styles.wrapper}>
       <Container>
         <div className={styles["title-section"]}>
-          <h5
+          <h4
             className={clsx(styles.title, {
               [styles["title--light-mode"]]: isLightMode,
             })}
           >
             Master your craft.
             <br /> Become a true professional.
-          </h5>
+          </h4>
           <p
             className={clsx(styles.description, "text-lg", {
               [styles["description--light-mode"]]: isLightMode,

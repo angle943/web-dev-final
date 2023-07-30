@@ -1,5 +1,17 @@
 .wrapper {
   margin-top: 5rem;
+
+  @media only screen and (max-width: 80rem) {
+    margin-top: 4rem;
+  }
+
+  @media only screen and (max-width: 64rem) {
+    margin-top: 3rem;
+  }
+
+  @media only screen and (max-width: 48rem) {
+    margin-top: 2rem;
+  }
 }
 
 .title-section {
@@ -11,6 +23,13 @@
   width: 40rem;
   margin-left: auto;
   margin-right: auto;
+
+  @media only screen and (max-width: 48rem) {
+    width: unset;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    gap: 1.5rem;
+  }
 }
 
 .title {
@@ -93,4 +112,14 @@
   margin-left: auto;
   margin-right: auto;
   width: 60rem;
+
+  @media only screen and (max-width: 64rem) {
+    width: unset;
+  }
+
+  @media only screen and (max-width: 48rem) {
+    margin-top: 2rem;
+    flex-direction: column;
+    gap: 2rem;
+  }
 }
