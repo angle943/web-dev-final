@@ -24,6 +24,12 @@
         border-color: rgb(var(--blue-900));
         background-color: rgb(var(--blue-900));
       }
+
+      &:disabled {
+        color: rgb(var(--gray-200));
+        border-color: rgb(var(--gray-400));
+        background-color: rgb(var(--gray-400));
+      }
     }
 
     &--secondary {
@@ -51,16 +57,22 @@
   border-color: rgb(var(--blue-800));
   background-color: rgb(var(--blue-800));
   color: rgb(var(--gray-50));
-}
 
-.primary:hover {
-  border-color: rgb(var(--blue-600));
-  background-color: rgb(var(--blue-600));
-}
+  &:hover {
+    border-color: rgb(var(--blue-600));
+    background-color: rgb(var(--blue-600));
+  }
 
-.primary:active {
-  border-color: rgb(var(--blue-900));
-  background-color: rgb(var(--blue-900));
+  &:active {
+    border-color: rgb(var(--blue-900));
+    background-color: rgb(var(--blue-900));
+  }
+
+  &:disabled {
+    color: rgb(var(--gray-200));
+    border-color: rgb(var(--gray-500));
+    background-color: rgb(var(--gray-500));
+  }
 }
 
 .secondary {

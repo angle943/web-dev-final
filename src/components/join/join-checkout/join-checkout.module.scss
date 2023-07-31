@@ -1,0 +1,19 @@
+.title {
+  color: rgb(var(--gray-50));
+  margin-bottom: 2rem;
+
+  &--light-mode {
+    color: rgb(var(--gray-950));
+  }
+}
+
+.input {
+  max-width: 30rem;
+  margin-bottom: 2rem;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+}

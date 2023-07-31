@@ -1,0 +1,47 @@
+.input-set {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+
+  & > label {
+    color: rgb(var(--gray-50));
+  }
+
+  & > input {
+    outline: none;
+    padding: 0.5rem 1rem;
+    border: 3px solid rgb(var(--gray-300));
+    border-radius: 0.25rem;
+    transition: border-color 100ms ease-in;
+
+    &:focus {
+      border-color: rgb(var(--blue-600));
+    }
+
+    &.input-error {
+      border-color: rgb(var(--red-500));
+    }
+  }
+
+  & > span {
+    color: rgb(var(--red-500));
+  }
+
+  &--light-mode {
+    & > label {
+      color: rgb(var(--gray-950));
+    }
+
+    & > input {
+      border-color: rgb(var(--gray-400));
+
+      &:focus {
+        border-color: rgb(var(--blue-500));
+      }
+
+      &.input-error {
+        border-color: rgb(var(--red-500));
+      }
+    }
+  }
+}

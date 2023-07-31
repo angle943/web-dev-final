@@ -1,0 +1,35 @@
+.summary-container {
+  background: linear-gradient(rgb(var(--gray-100)) 25%, rgb(var(--gray-300)));
+  border-radius: 0.5rem;
+  padding: 1.5rem 1rem 1rem;
+  margin-bottom: 4rem;
+
+  &--light-mode {
+    background: rgb(var(--gray-50));
+    box-shadow: 0 0 0.5rem rgba(var(--gray-900), 0.5);
+  }
+}
+
+.title {
+  color: rgb(var(--gray-950));
+  margin-bottom: 1rem;
+}
+
+.bold {
+  font-weight: var(--font-weight-bold);
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.description {
+  color: rgb(var(--gray-500));
+  display: block;
+}
+
+.hr {
+  border-color: rgb(var(--gray-400));
+  margin: 1rem -1rem;
+}

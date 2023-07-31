@@ -51,6 +51,18 @@
   --blue-900: 30, 58, 138;
   --blue-950: 23, 37, 84;
 
+  --red-50: 254, 242, 242;
+  --red-100: 254, 226, 226;
+  --red-200: 254, 202, 202;
+  --red-300: 252, 165, 165;
+  --red-400: 248, 113, 113;
+  --red-500: 239, 68, 68;
+  --red-600: 220, 38, 38;
+  --red-700: 185, 28, 28;
+  --red-800: 153, 27, 27;
+  --red-900: 127, 29, 29;
+  --red-950: 69, 10, 10;
+
   --font-size-3xm: 0.5rem;
   --font-size-2xm: 0.625rem;
   --font-size-xs: 0.75rem;
@@ -97,6 +109,7 @@
 html {
   box-sizing: border-box;
   font-size: 16px;
+  scrollbar-gutter: stable;
 }
 
 *,
@@ -124,7 +137,6 @@ body {
   background: rgb(var(--gray-950));
   outline-style: none;
   outline-width: 1px;
-  scrollbar-gutter: stable;
 }
 
 .body--locked {

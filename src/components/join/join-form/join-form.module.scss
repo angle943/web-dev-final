@@ -1,0 +1,65 @@
+.container {
+  display: flex;
+  align-items: flex-start;
+  gap: 4rem;
+  margin-top: 5rem;
+  margin-bottom: 12rem;
+  width: 100%;
+}
+
+.section-form {
+  flex: 1;
+}
+
+.section-summary {
+  width: 20rem;
+}
+
+.join-progress {
+  margin-bottom: 5rem;
+}
+
+.overlay {
+  align-items: center;
+  background: rgba(var(--gray-900), 0.4);
+  backdrop-filter: blur(4px);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 10000;
+
+  &--light-mode {
+    background: rgba(var(--gray-100), 0.4);
+  }
+}
+
+.dialog {
+  border-radius: 1rem;
+  background: linear-gradient(rgb(var(--gray-50)) 25%, rgb(var(--gray-300)));
+  color: rgb(var(--gray-950));
+  padding: 3rem;
+  max-width: 40rem;
+
+  &--light-mode {
+    background: rgb(var(--gray-50));
+    box-shadow: 0 0 0.5rem rgba(var(--gray-900), 0.5);
+  }
+}
+
+.dialog-title {
+  margin-bottom: 4rem;
+}
+
+.dialog-description {
+  margin-bottom: 2rem;
+}
+
+.dialog-button-container {
+  display: flex;
+  justify-content: flex-end;
+}

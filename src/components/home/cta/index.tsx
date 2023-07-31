@@ -78,7 +78,7 @@ export function Cta() {
             description={
               individualPlanIsSelected
                 ? "Instant access to all of our courses and community."
-                : "Purchase at a discount for teams of 5+ users."
+                : "Purchase at a discount for teams of 5+ users. Great for a small team."
             }
             price={individualPlanIsSelected ? 35 : 30}
             priceRate={

@@ -18,7 +18,9 @@
   border-radius: 50%;
   color: rgb(var(--gray-50));
   margin-left: 1.5rem;
-  transition: all 100ms ease-in;
+  transition:
+    background-color 100ms ease-in,
+    color 100ms ease-in;
   font-size: var(--font-size-xl);
   padding: 0.5rem;
 

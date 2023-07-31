@@ -1,0 +1,19 @@
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  animation: spin 2s infinite linear;
+  color: rgb(var(--gray-300));
+  height: 5rem;
+  width: 5rem;
+
+  &--light-mode {
+    color: rgb(var(--gray-600));
+  }
+}

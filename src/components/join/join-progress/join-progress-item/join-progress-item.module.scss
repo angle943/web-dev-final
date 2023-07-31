@@ -1,0 +1,50 @@
+.button {
+  border-bottom-width: 2px;
+  border-bottom-color: transparent;
+  cursor: default;
+  color: rgb(var(--gray-400));
+  text-align: left;
+  flex: 1;
+  padding: 0.5rem 2rem;
+  transition:
+    color 200ms ease-in,
+    border-bottom-color 200ms ease-in;
+
+  &--selected {
+    color: rgb(var(--gray-50));
+    border-bottom: 2px solid rgb(var(--gray-50));
+    font-weight: var(--font-weight-bold);
+  }
+
+  &--selectable {
+    color: rgb(var(--gray-50));
+    cursor: pointer;
+
+    &:hover {
+      color: rgb(var(--blue-500));
+      border-bottom: 2px solid rgb(var(--blue-500));
+      font-weight: var(--font-weight-bold);
+    }
+  }
+
+  &--light-mode {
+    color: rgb(var(--gray-500));
+  }
+
+  &--selected--light-mode {
+    color: rgb(var(--gray-950));
+    border-bottom: 2px solid rgb(var(--gray-950));
+    font-weight: var(--font-weight-bold);
+  }
+
+  &--selectable--light-mode {
+    color: rgb(var(--gray-950));
+    cursor: pointer;
+
+    &:hover {
+      color: rgb(var(--blue-600));
+      border-bottom: 2px solid rgb(var(--blue-600));
+      font-weight: var(--font-weight-bold);
+    }
+  }
+}

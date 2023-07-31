@@ -1,0 +1,94 @@
+.radio-group {
+  align-items: stretch;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 2rem;
+  grid-row-gap: 0.5rem;
+  margin-bottom: 4rem;
+}
+
+.radio-group-option {
+  background: linear-gradient(rgb(var(--gray-50)) 25%, rgb(var(--gray-300)));
+  border-width: 0.25rem;
+  border-color: transparent;
+  border-radius: 0.5rem;
+  flex: 1;
+  padding: 2rem;
+  position: relative;
+  transition:
+    background-color 200ms ease-in,
+    border-color 200ms ease-in;
+  cursor: pointer;
+
+  &--light-mode {
+    background: rgb(var(--gray-50));
+    box-shadow: 0 0 0.5rem rgba(var(--gray-900), 0.5);
+  }
+
+  &--selected {
+    background: linear-gradient(rgb(var(--blue-50)) 25%, rgb(var(--blue-300)));
+    border-color: rgb(var(--blue-600));
+
+    & > .radio-group-label {
+      font-weight: var(--font-weight-semibold);
+    }
+  }
+
+  &--selected--light-mode {
+    background: linear-gradient(rgb(var(--blue-50)) 25%, rgb(var(--blue-200)));
+    border-color: rgb(var(--blue-500));
+
+    & > .radio-group-label {
+      font-weight: var(--font-weight-semibold);
+    }
+  }
+}
+
+.radio-group-label {
+  color: rgb(var(--gray-50));
+  grid-column: 1 / -1;
+  grid-row: 1 / span 1;
+
+  &--light-mode {
+    color: rgb(var(--gray-950));
+  }
+}
+
+.radio-group-option-title {
+  margin-bottom: 1rem;
+}
+
+.radio-group-option-description {
+}
+
+.pricing-per-month {
+  align-items: flex-end;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.price {
+  font-weight: var(--font-weight-light);
+}
+
+.price-description {
+  color: rgb(var(--gray-500));
+}
+
+.radio-group-option-checkmark {
+  color: rgba(var(--gray-800), 0.5);
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  width: 2rem;
+  height: 2rem;
+}
+
+.seat-input {
+  max-width: 10rem;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row-reverse;
+}
