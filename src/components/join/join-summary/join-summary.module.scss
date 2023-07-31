@@ -8,6 +8,19 @@
     background: rgb(var(--gray-50));
     box-shadow: 0 0 0.5rem rgba(var(--gray-900), 0.5);
   }
+
+  @media only screen and (max-width: 80rem) {
+    margin-bottom: 3rem;
+  }
+
+  @media only screen and (max-width: 64rem) {
+    margin-bottom: 2rem;
+    padding: 1rem 0.75rem 0.75rem;
+  }
+
+  @media only screen and (max-width: 64rem) {
+    padding: 1.25rem 1rem 1rem;
+  }
 }
 
 .title {
@@ -32,4 +45,8 @@
 .hr {
   border-color: rgb(var(--gray-400));
   margin: 1rem -1rem;
+
+  @media only screen and (max-width: 64rem) {
+    margin: 1rem -0.75rem;
+  }
 }

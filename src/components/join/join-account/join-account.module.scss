@@ -1,10 +1,26 @@
 .input {
   max-width: 30rem;
   margin-bottom: 2rem;
+
+  @media only screen and (max-width: 80rem) {
+    margin-bottom: 1.5rem;
+  }
+
+  @media only screen and (max-width: 64rem) {
+    margin-bottom: 1rem;
+  }
 }
 
 .button-container {
   display: flex;
   justify-content: space-between;
   margin-top: 4rem;
+
+  @media only screen and (max-width: 80rem) {
+    margin-top: 3rem;
+  }
+
+  @media only screen and (max-width: 64rem) {
+    margin-top: 2rem;
+  }
 }

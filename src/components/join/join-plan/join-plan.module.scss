@@ -5,11 +5,24 @@
   grid-column-gap: 2rem;
   grid-row-gap: 0.5rem;
   margin-bottom: 4rem;
+
+  @media only screen and (max-width: 80rem) {
+    margin-bottom: 3rem;
+  }
+
+  @media only screen and (max-width: 64rem) {
+    margin-bottom: 2rem;
+  }
+
+  @media only screen and (max-width: 48rem) {
+    grid-template-columns: 1fr;
+    margin-bottom: 2rem;
+  }
 }
 
 .radio-group-option {
   background: linear-gradient(rgb(var(--gray-50)) 25%, rgb(var(--gray-300)));
-  border-width: 0.25rem;
+  border-width: 4px;
   border-color: transparent;
   border-radius: 0.5rem;
   flex: 1;
@@ -19,6 +32,21 @@
     background-color 200ms ease-in,
     border-color 200ms ease-in;
   cursor: pointer;
+
+  @media only screen and (max-width: 80rem) {
+    padding: 1.5rem;
+  }
+
+  @media only screen and (max-width: 64rem) {
+    border-width: 2px;
+    padding: 1rem;
+  }
+
+  @media only screen and (max-width: 48rem) {
+    border-width: 4px;
+    padding: 0.75rem;
+    max-width: 25rem;
+  }
 
   &--light-mode {
     background: rgb(var(--gray-50));
@@ -56,6 +84,14 @@
 
 .radio-group-option-title {
   margin-bottom: 1rem;
+
+  @media only screen and (max-width: 80rem) {
+    margin-bottom: 0.75rem;
+  }
+
+  @media only screen and (max-width: 64rem) {
+    margin-bottom: 0.5rem;
+  }
 }
 
 .radio-group-option-description {
@@ -65,6 +101,20 @@
   align-items: flex-end;
   display: flex;
   gap: 0.5rem;
+
+  @media only screen and (max-width: 64rem) {
+    flex-direction: column;
+    gap: 0;
+    align-items: unset;
+    margin-bottom: 0.5rem;
+  }
+
+  @media only screen and (max-width: 48rem) {
+    flex-direction: row;
+    gap: 0.25rem;
+    align-items: flex-end;
+    margin-bottom: 0;
+  }
 }
 
 .price {
@@ -82,13 +132,46 @@
   top: 1rem;
   width: 2rem;
   height: 2rem;
+
+  @media only screen and (max-width: 80rem) {
+    right: 0.75rem;
+    top: 0.75rem;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  @media only screen and (max-width: 64rem) {
+    right: 0.5rem;
+    top: 0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  @media only screen and (max-width: 48rem) {
+    right: 0.5rem;
+    top: 0.5rem;
+    width: 1.25rem;
+    height: 1.25rem;
+  }
 }
 
 .seat-input {
   max-width: 10rem;
+
+  @media only screen and (max-width: 64rem) {
+    margin-bottom: 1rem;
+  }
 }
 
 .button-container {
   display: flex;
   flex-direction: row-reverse;
+
+  @media only screen and (max-width: 48rem) {
+    justify-content: center;
+
+    & > button {
+      width: 100%;
+    }
+  }
 }

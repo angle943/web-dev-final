@@ -17,6 +17,19 @@
   &--light-mode {
     border-color: rgba(var(--gray-300), 0.5);
   }
+
+  @media only screen and (max-width: 64rem) {
+    border-width: 2px;
+    border-color: rgba(var(--gray-800), 0.75);
+    padding: 0.75rem 0.5rem;
+  }
+
+  @media only screen and (max-width: 48rem) {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    max-width: 30rem;
+  }
 }
 
 .wrapper {
@@ -27,6 +40,11 @@
   height: 5rem;
   overflow: hidden;
   margin-bottom: 1rem;
+
+  @media only screen and (max-width: 64rem) {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
 }
 
 .image {
