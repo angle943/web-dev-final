@@ -14,13 +14,17 @@ import {
 } from "react-icons/fa";
 import clsx from "clsx";
 import { useColorContext } from "@/context/color-context";
+import { usePathname } from "next/navigation";
 
 export function Footer() {
+  const pathname = usePathname();
   const { isLightMode } = useColorContext();
+
+  const hideHr = pathname.includes(PageRoute.courses);
 
   return (
     <Container className={styles.container}>
-      <hr className={styles.hr} />
+      <hr className={clsx(styles.hr, { [styles["hr--hide"]]: hideHr })} />
       <footer className={styles.footer}>
         <div className={styles.main}>
           <Logo />

@@ -18,6 +18,10 @@
   @media only screen and (max-width: 48rem) {
     margin-bottom: 3rem;
   }
+
+  &--hide {
+    border-color: transparent;
+  }
 }
 
 .footer {
