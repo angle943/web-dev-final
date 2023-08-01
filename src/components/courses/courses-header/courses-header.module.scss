@@ -1,0 +1,19 @@
+.header {
+  background-color: rgb(var(--gray-950));
+  color: rgb(var(--gray-50));
+  display: flex;
+  flex-direction: column;
+  height: 40rem;
+  justify-content: flex-end;
+  padding: 5rem;
+  gap: 3rem;
+}
+
+.title {
+  font-weight: var(--font-weight-semibold);
+}
+
+.description {
+  font-weight: var(--font-weight-thin);
+  max-width: 40rem;
+}

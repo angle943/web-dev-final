@@ -11,12 +11,12 @@ export type UnderlinedTextProps = {
 export function UnderlinedText({ children, className }: UnderlinedTextProps) {
   const { isLightMode } = useColorContext();
   return (
-    <span
+    <mark
       className={clsx(styles.text, className, {
         [styles["text--light-mode"]]: isLightMode,
       })}
     >
       {children}
-    </span>
+    </mark>
   );
 }

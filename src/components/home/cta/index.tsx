@@ -5,6 +5,7 @@ import clsx from "clsx";
 import { useState } from "react";
 import { CtaCard } from "@/components/home/cta/cta-card";
 import { useColorContext } from "@/context/color-context";
+import { Tag } from "@/components/tag";
 
 export function Cta() {
   const { isLightMode } = useColorContext();
@@ -98,6 +99,7 @@ export function Cta() {
                 ? "billed annually"
                 : "per seat, billed annually"
             }
+            tag={<Tag className={styles.tag}>Save 17%</Tag>}
           />
         </div>
       </Container>

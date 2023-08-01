@@ -14,13 +14,6 @@
       right linear 200ms;
   }
 
-  &.active {
-    &::after {
-      left: 0;
-      right: 0;
-    }
-  }
-
   &:hover {
     &::after {
       left: 0;

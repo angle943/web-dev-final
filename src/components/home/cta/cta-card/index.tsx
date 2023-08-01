@@ -2,12 +2,14 @@ import styles from "./cta-card.module.scss";
 import clsx from "clsx";
 import { ButtonMain } from "@/components/buttons/button-main";
 import { useColorContext } from "@/context/color-context";
+import { ReactNode } from "react";
 
 export type CtaCardProps = {
   description: string;
   title: string;
   price: number;
   priceRate: string;
+  tag?: ReactNode;
 };
 
 export function CtaCard({
@@ -15,6 +17,7 @@ export function CtaCard({
   price,
   priceRate,
   title,
+  tag,
 }: CtaCardProps) {
   const { isLightMode } = useColorContext();
 
@@ -46,6 +49,7 @@ export function CtaCard({
         <li>Private online community</li>
         <li>Early access to new workshops & events</li>
       </ul>
+      {tag}
     </div>
   );
 }

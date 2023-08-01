@@ -133,6 +133,11 @@ ul {
   font-weight: normal;
 }
 
+mark {
+  background-color: unset;
+  color: unset;
+}
+
 body {
   background: rgb(var(--gray-950));
   outline-style: none;

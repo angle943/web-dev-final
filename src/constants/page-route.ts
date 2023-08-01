@@ -8,3 +8,13 @@ export const PageRoute = {
 } as const;
 
 export type PageRouteValues = (typeof PageRoute)[keyof typeof PageRoute];
+
+export const CoursesSection = {
+  courses: "courses",
+  business: "business",
+  free: "free",
+  books: "books",
+} as const;
+
+export type CoursesSectionValues =
+  (typeof CoursesSection)[keyof typeof CoursesSection];

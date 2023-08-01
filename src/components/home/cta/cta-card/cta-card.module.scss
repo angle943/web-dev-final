@@ -4,6 +4,7 @@
   color: rgb(var(--gray-950));
   flex: 1;
   padding: 4rem 3rem;
+  position: relative;
 
   @media only screen and (max-width: 80rem) {
     padding: 3.5rem 3rem;
