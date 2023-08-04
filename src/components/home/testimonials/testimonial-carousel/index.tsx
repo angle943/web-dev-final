@@ -42,8 +42,8 @@ const testimonyData: TestimonialProps[] = [
     testimony: [
       "It was so refreshing to take a course where they teach you actual relevant things! ACDX will actually help you understand how to be a professional developer.",
     ],
-    companyName: "Snapchat",
-    companySrc: `${picPath}snapchat.png`,
+    companyName: "Google",
+    companySrc: `${picPath}google.png`,
   },
 ];
 
