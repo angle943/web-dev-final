@@ -12,11 +12,33 @@
 
     & .white {
       top: 30%;
+
+      @media only screen and (max-width: 96rem) {
+        top: 20%;
+      }
     }
 
     & .description,
     .length,
-    .difficulty {
+    .difficulty,
+    .button {
+      opacity: 1;
+    }
+  }
+
+  @media only screen and (max-width: 48rem) {
+    & .image {
+      top: -15%;
+    }
+
+    & .white {
+      top: 20%;
+    }
+
+    & .description,
+    .length,
+    .difficulty,
+    .button {
       opacity: 1;
     }
   }
@@ -43,6 +65,14 @@
   z-index: 2;
   width: 100%;
   height: 100%;
+
+  @media only screen and (max-width: 96rem) {
+    top: 60%;
+  }
+
+  @media only screen and (max-width: 64rem) {
+    padding: 1.5rem;
+  }
 }
 
 .title {
@@ -53,6 +83,10 @@
 .description {
   opacity: 0;
   margin-bottom: 1rem;
+
+  @media only screen and (max-width: 64rem) {
+    margin-bottom: 0.5rem;
+  }
 }
 
 .length {
@@ -61,9 +95,15 @@
 }
 
 .difficulty {
+  opacity: 0;
   margin-bottom: 1rem;
+
+  @media only screen and (max-width: 64rem) {
+    margin-bottom: 0.5rem;
+  }
 }
 
 .button {
+  opacity: 0;
   align-self: flex-start;
 }

@@ -10,10 +10,11 @@ export function CoursesBusiness() {
     <section className={styles.section}>
       <CoursesSectionHeader
         id={CoursesSection.business}
-        title="Expand your business"
+        title="Expand Your Business"
       />
       <div className={styles.cta}>
         <Image
+          className={styles.image}
           src="/courses/business.jpg"
           alt="Shaking Hands"
           width={50 * 16}

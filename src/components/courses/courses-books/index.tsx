@@ -17,22 +17,26 @@ export function CoursesBooks() {
         title="Physical Resources"
       />
       <div className={styles.books}>
-        <figure className={styles.book}>
-          <h2 className={clsx(serif.className, "text-9xl")}>Pro React</h2>
-          <p className={clsx(sansSerif.className, "text-5xl", styles.bookdes)}>
-            Build a Scalable Frontend Codebase
-          </p>
-          <p className={clsx(sansSerif.className, "text-5xl")}>
-            By: Justin Kim
-          </p>
-          <Image
-            className={styles.logo}
-            src="/courses/react-logo.png"
-            alt="React Logo"
-            width={50 * 16}
-            height={50 * 16}
-          />
-        </figure>
+        <div className={styles["book-container"]}>
+          <figure className={styles.book}>
+            <h2 className={clsx(serif.className, "text-9xl")}>Pro React</h2>
+            <p
+              className={clsx(sansSerif.className, "text-5xl", styles.bookdes)}
+            >
+              Build a Scalable Frontend Codebase
+            </p>
+            <p className={clsx(sansSerif.className, "text-5xl")}>
+              By: Justin Kim
+            </p>
+            <Image
+              className={styles.logo}
+              src="/courses/react-logo.png"
+              alt="React Logo"
+              width={50 * 16}
+              height={50 * 16}
+            />
+          </figure>
+        </div>
         <div className={styles["text-section"]}>
           <h4 className={clsx(styles.new, "text-5xl")}>New Release!</h4>
           <h2 className={clsx(styles.title, "text-9xl")}>Pro React</h2>

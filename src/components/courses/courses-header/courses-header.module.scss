@@ -7,6 +7,29 @@
   justify-content: flex-end;
   padding: 5rem;
   gap: 3rem;
+
+  @media only screen and (max-width: 80rem) {
+    height: 30rem;
+    gap: 2.5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  @media only screen and (max-width: 64rem) {
+    height: 24rem;
+    gap: 1.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  @media only screen and (max-width: 48rem) {
+    height: 16rem;
+    gap: 1.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+    padding-top: 0;
+  }
 }
 
 .title {
@@ -16,4 +39,12 @@
 .description {
   font-weight: var(--font-weight-thin);
   max-width: 40rem;
+
+  @media only screen and (max-width: 80rem) {
+    max-width: 35rem;
+  }
+
+  @media only screen and (max-width: 64rem) {
+    max-width: 25rem;
+  }
 }

@@ -4,6 +4,23 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 10rem;
+
+  @media only screen and (max-width: 80rem) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin-bottom: 5rem;
+  }
+
+  @media only screen and (max-width: 64rem) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  @media only screen and (max-width: 48rem) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-bottom: 3rem;
+  }
 }
 
 .grid {
@@ -14,4 +31,30 @@
   grid-column-gap: 2rem;
   grid-row-gap: 2rem;
   grid-template-columns: repeat(3, 24rem);
+
+  @media only screen and (max-width: 96rem) {
+    grid-template-columns: repeat(3, 22rem);
+    grid-auto-rows: 30rem;
+  }
+
+  @media only screen and (max-width: 80rem) {
+    grid-template-columns: repeat(3, 18rem);
+    grid-auto-rows: 28rem;
+  }
+
+  @media only screen and (max-width: 64rem) {
+    grid-template-columns: repeat(2, 18rem);
+    grid-auto-rows: 26rem;
+  }
+
+  @media only screen and (max-width: 48rem) {
+    align-self: center;
+    grid-template-columns: repeat(1, 24rem);
+    grid-auto-rows: 22rem;
+  }
+
+  @media only screen and (max-width: 40rem) {
+    grid-template-columns: repeat(1, 22rem);
+    grid-auto-rows: 20rem;
+  }
 }

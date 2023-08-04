@@ -3,12 +3,13 @@ import { CoursesSectionHeader } from "@/components/courses/courses-section-heade
 import { CoursesSection, PageRoute } from "@/constants/page-route";
 import { ButtonMain } from "@/components/buttons/button-main";
 import Image from "next/image";
+import clsx from "clsx";
 
 export function CoursesFree() {
   return (
     <section className={styles.section}>
       <CoursesSectionHeader id={CoursesSection.free} title="Free Learning" />
-      <div className={styles.container}>
+      <div className={clsx(styles.container, styles.youtube)}>
         <div className={styles["text-section"]}>
           <h2>Free Tutorials</h2>
           <h6 className={styles.description}>
