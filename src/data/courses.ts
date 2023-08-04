@@ -40,7 +40,7 @@ export const courseData: Course[] = [
   },
   {
     id: "intro-js",
-    title: "Introduction to Programming using JavaScript",
+    title: "Introduction to JavaScript",
     description: "Learn how to program using the Javascript language!",
     difficulty: CourseDifficulty.beginner,
     lengthInMinutes: 864,
@@ -49,7 +49,7 @@ export const courseData: Course[] = [
   },
   {
     id: "intro-python",
-    title: "Introduction to Programming using Python",
+    title: "Introduction to Python",
     description: "Learn how to program using the Python language!",
     difficulty: CourseDifficulty.beginner,
     lengthInMinutes: 729,
@@ -68,7 +68,7 @@ export const courseData: Course[] = [
   },
   {
     id: "web-dev-bootcamp",
-    title: "Web Development Bootcamp using HTML/CSS/JavaScript",
+    title: "Web Development Bootcamp",
     description:
       "Learn how to build modern, professional websites using HTML, CSS, and JavaScript.",
     difficulty: CourseDifficulty.beginner,

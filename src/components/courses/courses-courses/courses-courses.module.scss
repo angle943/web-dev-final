@@ -1,0 +1,17 @@
+.section {
+  padding-left: 5rem;
+  padding-right: 5rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10rem;
+}
+
+.grid {
+  align-items: stretch;
+  align-self: flex-end;
+  display: grid;
+  grid-auto-rows: 32rem;
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  grid-template-columns: repeat(3, 24rem);
+}

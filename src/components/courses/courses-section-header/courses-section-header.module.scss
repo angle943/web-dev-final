@@ -1,0 +1,29 @@
+.wrapper {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 10rem;
+  gap: 5rem;
+  padding-bottom: 10rem;
+}
+
+.id-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.id {
+  text-transform: uppercase;
+  font-weight: var(--font-weight-extralight);
+  letter-spacing: 0.1rem;
+}
+
+.hr {
+  border-color: rgb(var(--gray-950));
+  width: 15rem;
+}
+
+.title {
+  flex: 1;
+  text-align: right;
+}

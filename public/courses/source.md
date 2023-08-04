@@ -30,3 +30,12 @@ https://www.flaticon.com/free-icon/react_919851?term=react&page=1&position=1&ori
 
 typescript
 https://www.flaticon.com/free-icon/typescript_5968381?term=typescript&page=1&position=1&origin=search&related_id=5968381
+
+business
+https://www.pexels.com/photo/man-and-woman-near-table-3184465/
+
+youtube logo
+https://commons.wikimedia.org/wiki/File:YouTube_full-color_icon_%282017%29.svg
+
+blog
+https://thesavvycouple.com/best-stock-photo-sites/

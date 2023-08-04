@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import Link from "next/link";
 import clsx from "clsx";
 import styles from "./courses-nav-link.module.scss";
 
@@ -11,8 +10,8 @@ export type CoursesNavLink = {
 
 export function CoursesNavLink({ children, className, href }: CoursesNavLink) {
   return (
-    <Link href={href} className={clsx(styles.link, className, "text-lg")}>
+    <a href={href} className={clsx(styles.link, className, "text-lg")}>
       {children}
-    </Link>
+    </a>
   );
 }
