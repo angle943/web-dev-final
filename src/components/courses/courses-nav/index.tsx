@@ -11,9 +11,7 @@ export function CoursesNav() {
       <CoursesNavLink href={`#${CoursesSection.business}`}>
         Business
       </CoursesNavLink>
-      <CoursesNavLink href={`#${CoursesSection.free}`}>
-        Free Content
-      </CoursesNavLink>
+      <CoursesNavLink href={`#${CoursesSection.free}`}>Free</CoursesNavLink>
       <CoursesNavLink href={`#${CoursesSection.books}`}>Books</CoursesNavLink>
     </nav>
   );

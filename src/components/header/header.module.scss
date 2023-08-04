@@ -23,7 +23,7 @@
 .logo {
   @media only screen and (max-width: 48rem) {
     position: relative;
-    z-index: 100;
+    z-index: 101;
   }
 }
 
@@ -40,7 +40,7 @@
   transform: rotate(0);
   transition: 500ms ease-in-out;
   width: 2rem;
-  z-index: 100;
+  z-index: 101;
 
   @media only screen and (max-width: 48rem) {
     display: block;
@@ -124,7 +124,7 @@
 
   @media only screen and (max-width: 48rem) {
     display: flex;
-    z-index: 10000;
+    z-index: 100;
   }
 
   &--active {
