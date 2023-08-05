@@ -12,6 +12,8 @@ export type CtaCardProps = {
   price: number;
   priceRate: string;
   tag?: ReactNode;
+  isYearly: boolean;
+  isIndividual: boolean;
 };
 
 export function CtaCard({
@@ -20,6 +22,8 @@ export function CtaCard({
   priceRate,
   title,
   tag,
+  isYearly,
+  isIndividual,
 }: CtaCardProps) {
   const { isLightMode } = useColorContext();
   const router = useRouter();
@@ -39,7 +43,11 @@ export function CtaCard({
       <ButtonMain
         variant="primary"
         onClick={() => {
-          router.push(PageRoute.join);
+          router.push(
+            `${PageRoute.join}?plan=${isYearly ? "yearly" : "monthly"}&seats=${
+              isIndividual ? "individual" : "team"
+            }`,
+          );
         }}
       >
         Sign up now

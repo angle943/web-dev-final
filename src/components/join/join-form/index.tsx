@@ -16,6 +16,7 @@ import { Spinner } from "@/components/spinner";
 import { ButtonMain } from "@/components/buttons/button-main";
 import { useColorContext } from "@/context/color-context";
 import clsx from "clsx";
+import { useSearchParams } from "next/navigation";
 
 const schema = z
   .object({
@@ -48,16 +49,20 @@ const schema = z
 export type FormSchemaType = z.infer<typeof schema>;
 
 export function JoinForm() {
+  const searchParams = useSearchParams();
   const { isLightMode } = useColorContext();
   const [dialogIsOpen, setDialogIsOpen] = useState<boolean>(false);
   const [overlayIsOpen, setOverlayIsOpen] = useState<boolean>(false);
   const [joinState, setJoinState] = useState<JoinState>(JoinState.plan);
 
+  const defaultIsYearlyPlan = searchParams.get("plan") === "yearly";
+  const defaultIsTeamPlan = searchParams.get("seats") === "team";
+
   const methods = useForm<FormSchemaType>({
     resolver: zodResolver(schema),
     defaultValues: {
-      isYearlyPlan: false,
-      isTeamPlan: false,
+      isYearlyPlan: defaultIsYearlyPlan,
+      isTeamPlan: defaultIsTeamPlan,
       seats: 5,
       email: "",
       password: "",

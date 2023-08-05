@@ -85,6 +85,8 @@ export function Cta() {
             priceRate={
               individualPlanIsSelected ? "per month" : "per seat, per month"
             }
+            isYearly={false}
+            isIndividual={individualPlanIsSelected}
           />
           <CtaCard
             title="Yearly"
@@ -100,6 +102,8 @@ export function Cta() {
                 : "per seat, billed annually"
             }
             tag={<Tag className={styles.tag}>Save 17%</Tag>}
+            isYearly={true}
+            isIndividual={individualPlanIsSelected}
           />
         </div>
       </Container>
