@@ -95,6 +95,7 @@
   width: 8rem;
   transition: color 300ms linear;
   z-index: 2;
+  outline: none !important;
 
   &--light-mode {
     color: rgb(var(--gray-950));

@@ -110,7 +110,7 @@ export function TypingArea({
   const focusOnInput = useCallback(() => {
     if (gameState !== GameState.finished) {
       const inputEl = document.getElementById("hidden-input");
-      inputEl?.focus();
+      inputEl?.focus({ preventScroll: true });
     }
   }, [gameState]);
 
