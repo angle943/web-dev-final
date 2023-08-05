@@ -43,7 +43,7 @@ export function Game() {
   }, [gameState, startCountdown, stopCountdown, resetCountdown]);
 
   const incrementPlan = () => {
-    if (gameState !== GameState.notStarted) {
+    if (gameState === GameState.inProgress) {
       return;
     }
 
@@ -60,6 +60,7 @@ export function Game() {
         setDifficulty(Difficulty.easy);
       }
     }
+    setGameState(GameState.notStarted);
   };
 
   return (
@@ -83,9 +84,9 @@ export function Game() {
             [styles["toggle-white--hard"]]: difficulty === Difficulty.hard,
             [styles["toggle-white--light-mode"]]: isLightMode,
             [styles["toggle-white--disabled"]]:
-              !isLightMode && gameState !== GameState.notStarted,
+              !isLightMode && gameState === GameState.inProgress,
             [styles["toggle-white--disabled--light-mode"]]:
-              isLightMode && gameState !== GameState.notStarted,
+              isLightMode && gameState === GameState.inProgress,
           })}
         />
         <span
