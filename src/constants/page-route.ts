@@ -18,3 +18,11 @@ export const CoursesSection = {
 
 export type CoursesSectionValues =
   (typeof CoursesSection)[keyof typeof CoursesSection];
+
+export const BlogSection = {
+  why: "blog-why",
+  java: "blog-java",
+  react: "blog-react",
+} as const;
+
+export type BlogSectionValues = (typeof BlogSection)[keyof typeof BlogSection];

@@ -4,7 +4,7 @@ import { useCounter } from "usehooks-ts";
 import { useEffect } from "react";
 import clsx from "clsx";
 import { ButtonMain } from "@/components/buttons/button-main";
-import { PageRoute } from "@/constants/page-route";
+import { BlogSection, PageRoute } from "@/constants/page-route";
 import { HeroTitle } from "@/components/home/hero/hero-title";
 
 export function Hero() {
@@ -42,7 +42,10 @@ export function Hero() {
           <ButtonMain variant="primary" href={PageRoute.courses}>
             Courses
           </ButtonMain>
-          <ButtonMain variant="secondary" href={PageRoute.blog}>
+          <ButtonMain
+            variant="secondary"
+            href={`${PageRoute.blog}#${BlogSection.why}`}
+          >
             Why acdx?
           </ButtonMain>
         </nav>
