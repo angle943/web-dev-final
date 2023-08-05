@@ -1,0 +1,8 @@
+.container {
+  gap: 3rem;
+  color: rgb(var(--gray-50));
+
+  &--light-mode {
+    color: rgb(var(--gray-950));
+  }
+}

@@ -1,5 +1,11 @@
 "use client";
 
+import { Game } from "@/components/play/game";
+
 export default function Play() {
-  return <main>Not yet implemented</main>;
+  return (
+    <main>
+      <Game />
+    </main>
+  );
 }
