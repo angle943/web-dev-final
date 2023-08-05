@@ -27,6 +27,7 @@ export function HeaderNav({ className, isMobile }: HeaderNavProps) {
       <HeaderNavLink label="Blog" href={PageRoute.blog} />
       <HeaderNavLink label="Play" href={PageRoute.play} />
       <HeaderNavLink label="Join" href={PageRoute.join} />
+      <HeaderNavLink label="Report" href={PageRoute.report} />
       {!disableLightBulb && (
         <button
           className={clsx(styles.light, {
