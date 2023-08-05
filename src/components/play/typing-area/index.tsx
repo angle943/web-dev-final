@@ -3,12 +3,12 @@ import { JetBrains_Mono } from "next/font/google";
 import clsx from "clsx";
 import {
   ChangeEventHandler,
+  KeyboardEventHandler,
   ReactNode,
   useCallback,
   useEffect,
   useState,
 } from "react";
-import { useEventListener } from "usehooks-ts";
 import { Difficulty, GameState } from "@/components/play/game";
 import { useColorContext } from "@/context/color-context";
 
@@ -122,8 +122,13 @@ export function TypingArea({
     }
   }, [focusOnInput, gameState]);
 
-  useEventListener("keypress", (evt) => {
-    if (evt.key === "Enter" && typedText === text) {
+  const handleKeyDown: KeyboardEventHandler<HTMLInputElement> = (e) => {
+    if (["ArrowLeft", "ArrowUp", "ArrowDown", "ArrowRight"].includes(e.key)) {
+      e.preventDefault();
+      return;
+    }
+    if (e.key === "Enter" && typedText === text) {
+      e.preventDefault();
       if (currentLine + 1 === textData.length) {
         setGameState(GameState.finished);
         return;
@@ -134,7 +139,7 @@ export function TypingArea({
       }
       setTypedText("");
     }
-  });
+  };
 
   const renderTypedText = (): ReactNode => {
     let output = "";
@@ -255,6 +260,7 @@ export function TypingArea({
         className={styles.hidden}
         onChange={handleType}
         autoFocus={true}
+        onKeyDown={handleKeyDown}
         id="hidden-input"
         value={typedText}
         onBlur={focusOnInput}
