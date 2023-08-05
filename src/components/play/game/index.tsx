@@ -42,12 +42,23 @@ export function Game() {
     }
   }, [gameState, startCountdown, stopCountdown, resetCountdown]);
 
-  const changeDifficulty = (difficulty: Difficulty) => () => {
+  const changeDifficulty = (newDifficulty: Difficulty) => () => {
     if (gameState === GameState.inProgress) {
       return;
     }
 
-    setDifficulty(difficulty);
+    if (newDifficulty === difficulty) {
+      if (difficulty === Difficulty.easy) {
+        setDifficulty(Difficulty.medium);
+      } else if (difficulty === Difficulty.medium) {
+        setDifficulty(Difficulty.hard);
+      } else {
+        setDifficulty(Difficulty.easy);
+      }
+    } else {
+      setDifficulty(newDifficulty);
+    }
+
     setGameState(GameState.notStarted);
   };
 
