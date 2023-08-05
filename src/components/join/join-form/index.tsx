@@ -21,7 +21,7 @@ const schema = z
   .object({
     isYearlyPlan: z.boolean(),
     isTeamPlan: z.boolean(),
-    seats: z.number().int("Must be an integer").min(10, "Must be at least 10"),
+    seats: z.number().int("Must be an integer").min(5, "Must be at least 5"),
     email: z
       .string()
       .min(1, { message: "Required" })
@@ -58,7 +58,7 @@ export function JoinForm() {
     defaultValues: {
       isYearlyPlan: false,
       isTeamPlan: false,
-      seats: 10,
+      seats: 5,
       email: "",
       password: "",
       confirmPassword: "",
@@ -72,7 +72,7 @@ export function JoinForm() {
   const isYearlyPlan = watch("isYearlyPlan");
   const seats = watch("seats");
 
-  const seatsToUse = !!errors.seats ? 10 : seats;
+  const seatsToUse = !!errors.seats ? 5 : seats;
 
   useEffect(() => {
     if (overlayIsOpen) {
