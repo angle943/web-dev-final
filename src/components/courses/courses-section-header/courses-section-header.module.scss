@@ -2,14 +2,18 @@
   display: flex;
   align-items: flex-start;
   padding-top: 10rem;
-  gap: 5rem;
+  gap: 3rem;
   padding-bottom: 10rem;
+  flex-direction: column;
+
+  @media only screen and (max-width: 96rem) {
+    gap: 2rem;
+  }
 
   @media only screen and (max-width: 64rem) {
+    gap: 1rem;
     padding-top: 5rem;
     padding-bottom: 5rem;
-    flex-direction: column;
-    gap: 1rem;
   }
 }
 
@@ -17,6 +21,7 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+  width: 100%;
 }
 
 .id {
@@ -27,31 +32,28 @@
 
 .hr {
   border-color: rgb(var(--gray-950));
-  width: 15rem;
+  width: 30rem;
 
   @media only screen and (max-width: 64rem) {
-    width: 30rem;
+    width: unset;
+    flex: 1;
   }
 }
 
 .title {
-  flex: 1;
-  text-align: right;
+  align-self: flex-end;
 
   @media only screen and (max-width: 96rem) {
-    align-self: stretch;
     font-size: var(--font-size-8xl);
     line-height: var(--font-size-8xl);
   }
 
   @media only screen and (max-width: 80rem) {
-    align-self: stretch;
     font-size: var(--font-size-7xl);
     line-height: var(--font-size-7xl);
   }
 
   @media only screen and (max-width: 64rem) {
-    align-self: stretch;
     font-size: var(--font-size-5xl);
     line-height: var(--font-size-5xl);
   }

@@ -21,3 +21,30 @@
     max-width: unset;
   }
 }
+
+.fixed-width {
+  max-width: unset;
+  width: calc(96rem - 4rem);
+
+  @media only screen and (max-width: 96rem) {
+    max-width: unset;
+    width: calc(80rem - 4rem);
+  }
+
+  @media only screen and (max-width: 80rem) {
+    max-width: unset;
+    width: calc(64rem - 4rem);
+  }
+
+  @media only screen and (max-width: 64rem) {
+    max-width: unset;
+    width: calc(48rem - 4rem);
+  }
+
+  @media only screen and (max-width: 48rem) {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    width: unset;
+    max-width: unset;
+  }
+}

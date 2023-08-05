@@ -1,19 +1,13 @@
 .section {
-  padding-left: 5rem;
-  padding-right: 5rem;
   display: flex;
   flex-direction: column;
   margin-bottom: 10rem;
 
   @media only screen and (max-width: 80rem) {
-    padding-left: 3rem;
-    padding-right: 3rem;
     margin-bottom: 5rem;
   }
 
   @media only screen and (max-width: 64rem) {
-    padding-left: 2rem;
-    padding-right: 2rem;
   }
 
   @media only screen and (max-width: 48rem) {

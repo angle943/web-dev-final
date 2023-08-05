@@ -2,6 +2,7 @@ import { CoursesSectionValues } from "@/constants/page-route";
 import { JetBrains_Mono } from "next/font/google";
 import styles from "./courses-section-header.module.scss";
 import clsx from "clsx";
+import { Container } from "@/components/container";
 
 const mono = JetBrains_Mono({ subsets: ["latin"] });
 
