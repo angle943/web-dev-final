@@ -3,6 +3,8 @@ import clsx from "clsx";
 import { ButtonMain } from "@/components/buttons/button-main";
 import { useColorContext } from "@/context/color-context";
 import { ReactNode } from "react";
+import { useRouter } from "next/navigation";
+import { PageRoute } from "@/constants/page-route";
 
 export type CtaCardProps = {
   description: string;
@@ -20,6 +22,7 @@ export function CtaCard({
   tag,
 }: CtaCardProps) {
   const { isLightMode } = useColorContext();
+  const router = useRouter();
 
   return (
     <div
@@ -33,7 +36,12 @@ export function CtaCard({
         <h5 className={styles.price}>${price}</h5>
         <span className="text-base">{priceRate}</span>
       </div>
-      <ButtonMain variant="primary" onClick={() => {}}>
+      <ButtonMain
+        variant="primary"
+        onClick={() => {
+          router.push(PageRoute.join);
+        }}
+      >
         Sign up now
       </ButtonMain>
       <ul
