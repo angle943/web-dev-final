@@ -262,6 +262,68 @@ export default function Report() {
             present.
           </p>
           <hr />
+
+          <h3>Evaluation I</h3>
+          <ReportPrompt>
+            What aspects of your work do you think were particularly successful?
+            Why?
+          </ReportPrompt>
+          <p>
+            I am quite pleased with my implementation for dark mode and light
+            mode. Firstly, I am quite satisfied in how I solved this, as I
+            believe that this is a scalable solution that can work even for
+            industry-sized applications. Secondly, I am quite satisfied with how
+            the UI looks for both modes.
+          </p>
+          <p>
+            I initially wanted to achieve this in a very formulaic way, where I
+            have a list of colors by a degree of darkness, and depending on the
+            mode I will use the opposite color on the other end of the darkness
+            spectrum. But in practice this did not result in a pleasing UI, and
+            so a lot of the work was done by trial and error and accessing what
+            looks right to me.
+          </p>
+          <p>
+            Some of my subjective findings was that, for example, a white card
+            on a dark background looks good, but a dark card on a white
+            background does not. It is more tiring to the eyes when reading
+            white text on a dark card that is on a white background. Therefore,
+            for these cards on light mode, I ended up using a white card with a
+            box-shadow. The box-shadow likewise did not look good on dark mode,
+            and so I omitted them in that color scheme.
+          </p>
+          <hr />
+
+          <h3>Evaluation II</h3>
+          <ReportPrompt>
+            What aspects of your work could be improved? How might you do things
+            differently another time?
+          </ReportPrompt>
+          <p>
+            The things that could be improved for my website were mainly due to
+            the five page limit constraint of this project. If that constraint
+            was not present, I would completely change the{" "}
+            <strong>courses page</strong> and the <strong>blog page</strong>.
+          </p>
+          <p>
+            My main frustration with the courses page is that I wanted to add a
+            filtering mechanism to the courses, such as the ability to filter by
+            language, by difficulty, and so on. But due to the fact that this
+            page also has a lot of other elements unrelated to the courses, such
+            as a CTA and resources on free materials, I could not get the UI to
+            work with the filters. If I could re-do this page without the page
+            number constraint, I would have just had &ldquo;featured&rdquo;
+            courses on this section, and have a button that navigates the user
+            to the full blown catalogue with the ability to filter the courses.
+          </p>
+          <p>
+            Similar to above, the blog page is currently a flat list of multiple
+            blogs. Without the page limit constraint, I would have made the blog
+            page where you can see all written blogs in a concise form, and have
+            the ability to click on a &ldquo;Read More&rdquo; button to go to
+            the article&apos;s dedicated page.
+          </p>
+          <hr />
         </Container>
       </div>
     </main>
