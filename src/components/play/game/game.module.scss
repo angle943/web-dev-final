@@ -86,6 +86,7 @@
 
 .toggle-option {
   color: rgb(var(--gray-50));
+  cursor: pointer;
   height: 100%;
   display: flex;
   align-items: center;
@@ -94,9 +95,14 @@
   width: 8rem;
   transition: color 300ms linear;
   z-index: 2;
+  outline: none !important;
 
   &--light-mode {
     color: rgb(var(--gray-950));
+  }
+
+  &:disabled {
+    cursor: default;
   }
 }
 

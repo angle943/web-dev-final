@@ -42,26 +42,27 @@ export function Game() {
     }
   }, [gameState, startCountdown, stopCountdown, resetCountdown]);
 
-  const incrementPlan = () => {
+  const changeDifficulty = (newDifficulty: Difficulty) => () => {
     if (gameState === GameState.inProgress) {
       return;
     }
 
-    switch (difficulty) {
-      case Difficulty.easy: {
+    if (newDifficulty === difficulty) {
+      if (difficulty === Difficulty.easy) {
         setDifficulty(Difficulty.medium);
-        break;
-      }
-      case Difficulty.medium: {
+      } else if (difficulty === Difficulty.medium) {
         setDifficulty(Difficulty.hard);
-        break;
-      }
-      default: {
+      } else {
         setDifficulty(Difficulty.easy);
       }
+    } else {
+      setDifficulty(newDifficulty);
     }
+
     setGameState(GameState.notStarted);
   };
+
+  const toggleIsDisabled = gameState === GameState.inProgress;
 
   return (
     <Container className={styles.container}>
@@ -76,7 +77,6 @@ export function Game() {
         className={clsx(styles["toggle-container"], {
           [styles["toggle-container--light-mode"]]: isLightMode,
         })}
-        onClick={incrementPlan}
       >
         <div
           className={clsx(styles["toggle-white"], {
@@ -84,12 +84,12 @@ export function Game() {
             [styles["toggle-white--hard"]]: difficulty === Difficulty.hard,
             [styles["toggle-white--light-mode"]]: isLightMode,
             [styles["toggle-white--disabled"]]:
-              !isLightMode && gameState === GameState.inProgress,
+              !isLightMode && toggleIsDisabled,
             [styles["toggle-white--disabled--light-mode"]]:
-              isLightMode && gameState === GameState.inProgress,
+              isLightMode && toggleIsDisabled,
           })}
         />
-        <span
+        <button
           className={clsx("text-lg", styles["toggle-option"], {
             [styles["toggle-option--light-mode"]]: isLightMode,
             [styles["toggle-option--selected"]]:
@@ -97,10 +97,12 @@ export function Game() {
             [styles["toggle-option--selected--light-mode"]]:
               isLightMode && difficulty === Difficulty.easy,
           })}
+          onClick={changeDifficulty(Difficulty.easy)}
+          disabled={toggleIsDisabled}
         >
           Easy
-        </span>
-        <span
+        </button>
+        <button
           className={clsx("text-lg", styles["toggle-option"], {
             [styles["toggle-option--light-mode"]]: isLightMode,
             [styles["toggle-option--selected"]]:
@@ -108,10 +110,12 @@ export function Game() {
             [styles["toggle-option--selected--light-mode"]]:
               isLightMode && difficulty === Difficulty.medium,
           })}
+          onClick={changeDifficulty(Difficulty.medium)}
+          disabled={toggleIsDisabled}
         >
           Medium
-        </span>
-        <span
+        </button>
+        <button
           className={clsx("text-lg", styles["toggle-option"], {
             [styles["toggle-option--light-mode"]]: isLightMode,
             [styles["toggle-option--selected"]]:
@@ -119,9 +123,11 @@ export function Game() {
             [styles["toggle-option--selected--light-mode"]]:
               isLightMode && difficulty === Difficulty.hard,
           })}
+          onClick={changeDifficulty(Difficulty.hard)}
+          disabled={toggleIsDisabled}
         >
           Hard
-        </span>
+        </button>
       </div>
       <div className={styles["game-section"]}>
         <GameStatus gameState={gameState} timer={timer} />

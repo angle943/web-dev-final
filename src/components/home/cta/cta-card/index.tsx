@@ -3,6 +3,8 @@ import clsx from "clsx";
 import { ButtonMain } from "@/components/buttons/button-main";
 import { useColorContext } from "@/context/color-context";
 import { ReactNode } from "react";
+import { useRouter } from "next/navigation";
+import { PageRoute } from "@/constants/page-route";
 
 export type CtaCardProps = {
   description: string;
@@ -10,6 +12,8 @@ export type CtaCardProps = {
   price: number;
   priceRate: string;
   tag?: ReactNode;
+  isYearly: boolean;
+  isIndividual: boolean;
 };
 
 export function CtaCard({
@@ -18,8 +22,11 @@ export function CtaCard({
   priceRate,
   title,
   tag,
+  isYearly,
+  isIndividual,
 }: CtaCardProps) {
   const { isLightMode } = useColorContext();
+  const router = useRouter();
 
   return (
     <div
@@ -33,7 +40,16 @@ export function CtaCard({
         <h5 className={styles.price}>${price}</h5>
         <span className="text-base">{priceRate}</span>
       </div>
-      <ButtonMain variant="primary" onClick={() => {}}>
+      <ButtonMain
+        variant="primary"
+        onClick={() => {
+          router.push(
+            `${PageRoute.join}?plan=${isYearly ? "yearly" : "monthly"}&seats=${
+              isIndividual ? "individual" : "team"
+            }`,
+          );
+        }}
+      >
         Sign up now
       </ButtonMain>
       <ul

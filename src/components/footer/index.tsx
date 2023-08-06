@@ -20,7 +20,8 @@ export function Footer() {
   const pathname = usePathname();
   const { isLightMode } = useColorContext();
 
-  const hideHr = pathname.includes(PageRoute.courses);
+  const hideHr =
+    pathname.includes(PageRoute.courses) || pathname.includes(PageRoute.report);
 
   return (
     <Container className={styles.container}>
@@ -63,25 +64,25 @@ export function Footer() {
               [styles["socials--light-mode"]]: isLightMode,
             })}
           >
-            <a>
+            <a role="button" aria-label="Github link">
               <FaGithub />
             </a>
-            <a>
+            <a role="button" aria-label="Youtube link">
               <FaYoutube />
             </a>
-            <a>
+            <a role="button" aria-label="Twitter link">
               <FaTwitter />
             </a>
-            <a>
+            <a role="button" aria-label="Tiktok link">
               <FaTiktok />
             </a>
-            <a>
+            <a role="button" aria-label="Linkedin link">
               <FaLinkedin />
             </a>
-            <a>
+            <a role="button" aria-label="Facebook link">
               <FaFacebook />
             </a>
-            <a>
+            <a role="button" aria-label="Instagram link">
               <FaInstagram />
             </a>
           </nav>
@@ -91,8 +92,8 @@ export function Footer() {
                 [styles["legals--light-mode"]]: isLightMode,
               })}
             >
-              <a>Privacy Policy</a>
-              <a>Terms & Conditions</a>
+              <a role="button">Privacy Policy</a>
+              <a role="button">Terms & Conditions</a>
             </nav>
             <span
               className={clsx(styles.copyright, {
