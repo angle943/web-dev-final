@@ -42,6 +42,8 @@ export function Cta() {
               [styles["toggle-container--light-mode"]]: isLightMode,
             })}
             onClick={togglePlan}
+            role="button"
+            tabIndex={0}
           >
             <div
               className={clsx(styles["toggle-white"], {

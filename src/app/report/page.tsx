@@ -119,7 +119,35 @@ export default function Report() {
             </strong>{" "}
             This was my main inspiration for creating the typing game. I wanted
             a page where I can showcase my JavaScript skills, while at the same
-            time being relevant to the intended audience.
+            time being relevant to the intended audience. Therefore I decided to
+            make a typing game where you write code instead of random words.
+          </p>
+          <hr />
+
+          <h3>Accessibility</h3>
+          <ReportPrompt>
+            State <strong>3</strong> ways in which your site is accessible.
+          </ReportPrompt>
+          <p>
+            1. Every page has been thoroughly tested to provide good user
+            experience for six viewports: Greater than 1536px, less than 1536px,
+            less than 1280px, less than 1024px, less than 768px, and less than
+            640px. This ensures that no matter the type of device the user has,
+            whether it be a desktop monitor, laptop monitor, tablet or phone, it
+            will result in a pleasing experience.
+          </p>
+          <p>
+            2. The website has gone through various automated accessibility
+            testing. This ensures things such as all image tags have
+            &ldquo;alt&rdquo; attributes, and various aria labels are added to
+            certain elements. It has also been tested to ensure that the color
+            contrast between the background and text is accessible.
+          </p>
+          <p>
+            3. I have provided both a &ldquo;dark mode&rdquo; as well as
+            &ldquo;daylight mode&rdquo; that is easily accessible via a button
+            on top of the page. This will allow users to choose their preference
+            when viewing the website.
           </p>
           <hr />
         </Container>
