@@ -107,6 +107,7 @@ export function TestimonialCarousel() {
           })}
           disabled={leftDisabled}
           onClick={handleLeftClick}
+          aria-label="Scroll left on the carousel"
         >
           <HiArrowLeft size="1.5rem" />
         </button>
@@ -116,6 +117,7 @@ export function TestimonialCarousel() {
           })}
           disabled={rightDisabled}
           onClick={handleRightClick}
+          aria-label="Scroll right on the carousel"
         >
           <HiArrowRight size="1.5rem" />
         </button>

@@ -35,6 +35,7 @@ export function HeaderNav({ className, isMobile }: HeaderNavProps) {
             [styles["light--light-mode"]]: isLightMode,
           })}
           onClick={toggleLightMode}
+          aria-label="Toggle dark mode"
         >
           <BsFillLightbulbFill />
         </button>
