@@ -158,6 +158,10 @@ body {
 *:focus {
   outline: rgb(var(--yellow-300)) solid 2px;
   transition: outline-width 250ms linear;
+
+  &:not(:focus-visible) {
+    outline: none;
+  }
 }
 
 .body--light-mode *:focus {

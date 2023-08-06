@@ -20,7 +20,8 @@ export function Footer() {
   const pathname = usePathname();
   const { isLightMode } = useColorContext();
 
-  const hideHr = pathname.includes(PageRoute.courses);
+  const hideHr =
+    pathname.includes(PageRoute.courses) || pathname.includes(PageRoute.report);
 
   return (
     <Container className={styles.container}>

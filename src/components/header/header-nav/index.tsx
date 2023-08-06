@@ -15,7 +15,8 @@ export function HeaderNav({ className, isMobile }: HeaderNavProps) {
   const { isLightMode, toggleLightMode } = useColorContext();
   const pathname = usePathname();
 
-  const disableLightBulb = pathname.includes(PageRoute.courses);
+  const disableLightBulb =
+    pathname.includes(PageRoute.courses) || pathname.includes(PageRoute.report);
 
   return (
     <nav
