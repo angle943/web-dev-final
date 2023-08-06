@@ -138,8 +138,12 @@ export default function Report() {
           </p>
           <p>
             2. The website has gone through various automated accessibility
-            testing, such as <a href="https://accessibe.com/">Accessibe</a> and{" "}
-            <a href="https://validator.w3.org/">
+            testing, such as{" "}
+            <a href="https://accessibe.com/" target="_blank">
+              Accessibe
+            </a>{" "}
+            and{" "}
+            <a href="https://validator.w3.org/" target="_blank">
               W3C Markup Validation Service
             </a>
             . This ensures things such as all image tags have &ldquo;alt&rdquo;
@@ -187,6 +191,75 @@ export default function Report() {
             have used Responsive CSS to disable the game in smaller viewports.
             They will be met with a message asking the users to use a bigger
             viewport to access the game.
+          </p>
+          <hr />
+
+          <h3>Learning</h3>
+          <ReportPrompt>
+            State <strong>3</strong> things you had to learn or find out to
+            create your site. How did you achieve that?
+          </ReportPrompt>
+          <p>
+            I have been a professional frontend engineer for about 5 years now,
+            with an additional 5 years as a application developer. I am
+            currently a lead frontend engineer at Amazon. Therefore, all things
+            related to frontend is my bread and butter, and so most of the work
+            was done without any new learning. There were still minor things I
+            have learned, which I will list here:
+          </p>
+          <p>
+            1. There is an animated progress bar in the home page, where
+            multiple elements needs to animate in synchrony. Naively attaching
+            css animation properties to these elements caused the overall
+            animation to be out of sync, and so I researched how this can be
+            done using pure CSS, and not relying on JavaScript. I then stumbled
+            upon the{" "}
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API"
+              target="_blank"
+            >
+              Web Animations API
+            </a>
+            , which was specifically made for this issue. I began using the
+            DocumentTimeline to ensure that these animations were in sync.
+            Although I still had to rely on Javascript to achieve this, I am
+            glad I was able to do this via the &ldquo;standard&rdquo; way,
+            instead of relying on JavaScript hacks.
+          </p>
+          <p>
+            2. Throughout my years as a frontend developer, I always struggled
+            with the UI of the &ldquo;focus&rdquo; outline that is present when
+            you tab into a focusable element. This is necessary to make the
+            webpage more accessible, but the result would be that the outline
+            would also appear when you click on the focusable element, which
+            often times conflicts with the focused state of the element, which
+            leads to an undesirable UI. But during the time I was working on
+            this project, by complete chance I stumbled upon a{" "}
+            <a href="https://youtu.be/x9rh0Du4Czg" target="_blank">
+              &ldquo;What&apos;s new in Web&rdquo; video
+            </a>{" "}
+            by Google, which introduced the newly added the CSS
+            &ldquo;:focus-visible&rdquo; pseudo-class selector, which completely
+            addressed this issue. This selector allows you to distinguish
+            between the focused state via tabs vs via clicks. Therefore I was
+            able to leverage this and hide the outline when clicking, but have
+            it still be visible when tabbing into the element.
+          </p>
+          <p>
+            3. This was the first website that I created that had the dark-mode
+            and light-mode option. I&apos;ve studied on some ways people achieve
+            this, such as using the CSS media query{" "}
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme"
+              target="_blank"
+            >
+              prefers-color-scheme
+            </a>
+            , but in the end I decided to go with my own custom method so that
+            the user has the ability to toggle between the two modes via a
+            button. I achieved this by making the button toggle a special class
+            in the root of the DOM tree, and adding CSS rules when that class is
+            present.
           </p>
           <hr />
         </Container>
