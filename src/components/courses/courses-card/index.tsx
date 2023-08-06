@@ -25,7 +25,12 @@ export function CoursesCard({
   return (
     <div className={styles.card}>
       <div className={styles.image}>
-        <Image src={img} alt="Course Image" width={384} height={384} />
+        <Image
+          src={img}
+          alt={title + " Course Image"}
+          width={384}
+          height={384}
+        />
       </div>
       <div className={styles.white}>
         <h6 className={clsx(styles.title, "text-2xl")}>{title}</h6>

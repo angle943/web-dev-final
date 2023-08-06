@@ -162,33 +162,45 @@ export function WhyProgression() {
           })}
         />
         <div className={clsx(styles.section, styles.html)}>
-          <div id={htmlDotId} className={clsx(styles.dot, {
-            [styles["dot--light-mode"]]: isLightMode,
-          })} />
+          <div
+            id={htmlDotId}
+            className={clsx(styles.dot, {
+              [styles["dot--light-mode"]]: isLightMode,
+            })}
+          />
           <span id={htmlTextId} className={clsx(styles.label, "text-xl")}>
             HTML
           </span>
         </div>
         <div className={clsx(styles.section, styles.css)}>
-          <div id={cssDotId} className={clsx(styles.dot, {
-            [styles["dot--light-mode"]]: isLightMode,
-          })} />
+          <div
+            id={cssDotId}
+            className={clsx(styles.dot, {
+              [styles["dot--light-mode"]]: isLightMode,
+            })}
+          />
           <span id={cssTextId} className={clsx(styles.label, "text-xl")}>
             CSS
           </span>
         </div>
         <div className={clsx(styles.section, styles.js)}>
-          <div id={jsDotId} className={clsx(styles.dot, {
-            [styles["dot--light-mode"]]: isLightMode,
-          })} />
+          <div
+            id={jsDotId}
+            className={clsx(styles.dot, {
+              [styles["dot--light-mode"]]: isLightMode,
+            })}
+          />
           <span id={jsTextId} className={clsx(styles.label, "text-xl")}>
             JS
           </span>
         </div>
         <div className={clsx(styles.section, styles.react)}>
-          <div id={reactDotId} className={clsx(styles.dot, {
-            [styles["dot--light-mode"]]: isLightMode,
-          })} />
+          <div
+            id={reactDotId}
+            className={clsx(styles.dot, {
+              [styles["dot--light-mode"]]: isLightMode,
+            })}
+          />
           <span id={reactTextId} className={clsx(styles.label, "text-xl")}>
             React
           </span>
