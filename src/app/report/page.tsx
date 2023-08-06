@@ -324,6 +324,167 @@ export default function Report() {
             the article&apos;s dedicated page.
           </p>
           <hr />
+
+          <h3>Resources</h3>
+          <ReportPrompt>
+            What resources did you use in your work? List any sources of
+            information, libraries, plugins, code or tools (you should also
+            indicate inclusions from other sources within your code using
+            comments)
+          </ReportPrompt>
+          <ul>
+            <li>
+              <a href="https://developer.mozilla.org/" target="_blank">
+                MDN Web Docs
+              </a>
+              . Documentation for all things related to HTML, CSS, and
+              JavaScript.
+            </li>
+            <li>
+              <a href="https://validator.w3.org/" target="_blank">
+                W3C Markup Validation Service
+              </a>
+              . Automated accessibility and validity checker for the website.
+            </li>
+            <li>
+              <a href="https://accessibe.com/" target="_blank">
+                Accessibe
+              </a>
+              . Automated accessibility checker.
+            </li>
+            <li>
+              <a href="https://imagecompressor.com/" target="_blank">
+                Optimizilla
+              </a>
+              . Automated tool to optimize images used to reduce the size.
+            </li>
+            <li>
+              <a href="https://www.jetbrains.com/webstorm/" target="_blank">
+                Jetbrains Webstorm
+              </a>
+              . IDE used to build the website.
+            </li>
+            <li>
+              <a href="https://www.figma.com/" target="_blank">
+                Figma
+              </a>
+              . Design tool used to build mocks and prototypes.
+            </li>
+            <li>
+              <a href="https://fonts.google.com/" target="_blank">
+                Google Fonts
+              </a>
+              . Source of the fonts and icons used.
+            </li>
+            <li>
+              <a
+                href="https://elements.envato.com/code-programming-ZK29GYU"
+                target="_blank"
+              >
+                Envato Elements
+              </a>
+              . Source of the video on home page.
+            </li>
+            <li>
+              <a
+                href="https://www.wecreateproblems.com/how-faang-hires-engineers"
+                target="_blank"
+              >
+                WeCP
+              </a>
+              . Source of the FAANG image on home page.
+            </li>
+            <li>
+              <a href="https://www.freepik.com/" target="_blank">
+                Freepik
+              </a>
+              . Source of various stock images used on the website, such as
+              images of people.
+            </li>
+            <li>
+              <a href="https://www.flaticon.com/" target="_blank">
+                Flaticon
+              </a>
+              . Source of various technology logos used in the website.
+            </li>
+            <li>
+              <a href="https://icons8.com/" target="_blank">
+                Icons8
+              </a>
+              . Source of various technology logos used in the website.
+            </li>
+            <li>
+              <a
+                href="https://codepen.io/designcouch/pen/ExvwPY"
+                target="_blank"
+              >
+                Jesse Couch Codepen
+              </a>
+              . Source of hamburger icon animation used on website.
+            </li>
+          </ul>
+          <p>Citations:</p>
+          <ul>
+            <li>
+              [1] MDN Web Docs. 2023. [Online]. Available:
+              https://developer.mozilla.org/en-US/ . [Accessed: 5-Aug-2023].
+            </li>
+            <li>
+              [2] W3C Markup Validation Service. 2023. [Online]. Available:
+              https://validator.w3.org/ . [Accessed: 5-Aug-2023].
+            </li>
+            <li>
+              [3] accessiBe. 2023. [Online]. Available: https://accessibe.com/ .
+              [Accessed: 5-Aug-2023].
+            </li>
+            <li>
+              [4] Optimizilla. 2023. [Online]. Available:
+              https://imagecompressor.com/ . [Accessed: 5-Aug-2023].
+            </li>
+            <li>
+              [5] Google Fonts. 2023. [Online]. Available:
+              https://fonts.google.com/ . [Accessed: 5-Aug-2023].
+            </li>
+            <li>
+              [6] Envato Elements. 2023. [Online]. Available:
+              https://elements.envato.com/code-programming-ZK29GYU . [Accessed:
+              5-Aug-2023].
+            </li>
+            <li>
+              [7] Aadam Wajid. WeCP. 2023. [Online]. Available:
+              https://www.wecreateproblems.com/how-faang-hires-engineers .
+              [Accessed: 5-Aug-2023].
+            </li>
+            <li>
+              [8] Freepik. 2023. [Online]. Available: https://www.freepik.com/ .
+              [Accessed: 5-Aug-2023].
+            </li>
+            <li>
+              [9] Flaticon. 2023. [Online]. Available: https://www.flaticon.com/
+              . [Accessed: 5-Aug-2023].
+            </li>
+            <li>
+              [10] Icons8. 2023. [Online]. Available: https://icons8.com/ .
+              [Accessed: 5-Aug-2023].
+            </li>
+            <li>
+              [11] Jesse Couch. &ldquo;Menu &quot;Hamburger&quot; Icon
+              Animations&rdquo;, 2023. [Online]. Available:
+              https://codepen.io/designcouch/pen/ExvwPY . [Accessed:
+              5-Aug-2023].
+            </li>
+            <li>
+              [12] Simon Bisson. 2021. [Online]. Available:
+              https://www.infoworld.com/article/3614938/microsoft-returns-to-java-with-azure-focused-openjdk-release.html
+              . [Accessed: 5-Aug-2023].
+            </li>
+            <li>
+              [13] Adhithi Ravichandran. 2023. [Online]. Available:
+              https://adhithiravi.medium.com/what-are-server-components-and-client-components-in-react-18-and-next-js-13-6f869c0c66b0
+              . [Accessed: 5-Aug-2023].
+            </li>
+          </ul>
+          <hr />
         </Container>
       </div>
     </main>
