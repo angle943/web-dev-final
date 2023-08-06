@@ -154,6 +154,41 @@ export default function Report() {
             when viewing the website.
           </p>
           <hr />
+
+          <h3>Usability</h3>
+          <ReportPrompt>
+            State <strong>3</strong> ways in which you considered the usability
+            of your site.
+          </ReportPrompt>
+          <p>
+            1. For desktop experience, the header is presented as a top
+            navigation bar, while for smaller viewport, I have used CSS to
+            transform this into an hamburger icon that opens up a flyout. This
+            is a standard industry practice that is commonly done due to the
+            restricted space in mobile devices.
+          </p>
+          <p>
+            2. There are several elements with a &ldquo;hover&rdquo;
+            interactivity, such as the course cards in the Courses page, as well
+            as the carousel of programming technologies in the home page. Since
+            there is no concept of &ldquo;hover&rdquo; for mobile devices, I
+            have used CSS to specifically target smaller viewports such that
+            these elements no longer need to be hovered in order to view more
+            detail.
+          </p>
+          <p>
+            3. A lot of detail has been put into the typing game. For example,
+            when there are nested tabs in lines, I added logic such that the
+            line is automatically tabbed when going to the new line, which is
+            consistent with the experience most developers have in modern IDEs.
+            Empty lines are also automatically skipped. And since it is
+            extremely difficult to type programming symbols on a mobile device,
+            let alone the fact that virtually no one codes in a mobile device, I
+            have used Responsive CSS to disable the game in smaller viewports.
+            They will be met with a message asking the users to use a bigger
+            viewport to access the game.
+          </p>
+          <hr />
         </Container>
       </div>
     </main>
