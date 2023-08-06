@@ -485,6 +485,13 @@ export default function Report() {
             </li>
           </ul>
           <hr />
+
+          <h3>Appendices</h3>
+          <ReportPrompt>
+            Site map (if useful), wireframes and mock-ups
+          </ReportPrompt>
+          <p>TODO</p>
+          <hr />
         </Container>
       </div>
     </main>
