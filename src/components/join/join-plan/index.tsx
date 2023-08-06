@@ -93,6 +93,7 @@ export function JoinPlan({ handleNextState }: JoinPlanProps) {
             [styles["radio-group-option--selected--light-mode"]]:
               isLightMode && !isTeamPlan,
           })}
+          aria-label="Individual Plan"
         >
           <>
             <h6 className={styles["radio-group-option-title"]}>Individual</h6>
@@ -116,6 +117,7 @@ export function JoinPlan({ handleNextState }: JoinPlanProps) {
             [styles["radio-group-option--selected--light-mode"]]:
               isLightMode && isTeamPlan,
           })}
+          aria-label="Team Plan"
         >
           <>
             <h6 className={styles["radio-group-option-title"]}>Team</h6>
@@ -152,6 +154,7 @@ export function JoinPlan({ handleNextState }: JoinPlanProps) {
             [styles["radio-group-option--selected--light-mode"]]:
               isLightMode && !isYearlyPlan,
           })}
+          aria-label="Monthly Plan"
         >
           <>
             <h6 className={styles["radio-group-option-title"]}>Monthly</h6>
@@ -178,6 +181,7 @@ export function JoinPlan({ handleNextState }: JoinPlanProps) {
             [styles["radio-group-option--selected--light-mode"]]:
               isLightMode && isYearlyPlan,
           })}
+          aria-label="Yearly Plan"
         >
           <>
             <h6 className={styles["radio-group-option-title"]}>Yearly</h6>

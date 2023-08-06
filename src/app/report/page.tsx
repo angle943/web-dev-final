@@ -138,10 +138,14 @@ export default function Report() {
           </p>
           <p>
             2. The website has gone through various automated accessibility
-            testing. This ensures things such as all image tags have
-            &ldquo;alt&rdquo; attributes, and various aria labels are added to
-            certain elements. It has also been tested to ensure that the color
-            contrast between the background and text is accessible.
+            testing, such as <a href="https://accessibe.com/">Accessibe</a> and{" "}
+            <a href="https://validator.w3.org/">
+              W3C Markup Validation Service
+            </a>
+            . This ensures things such as all image tags have &ldquo;alt&rdquo;
+            attributes, and various aria labels are added to certain elements.
+            It has also been tested to ensure that the color contrast between
+            the background and text is accessible.
           </p>
           <p>
             3. I have provided both a &ldquo;dark mode&rdquo; as well as

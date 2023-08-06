@@ -265,6 +265,7 @@ export function TypingArea({
         value={typedText}
         onBlur={focusOnInput}
         autoComplete="off"
+        aria-label="Typing input"
       />
     </>
   );
