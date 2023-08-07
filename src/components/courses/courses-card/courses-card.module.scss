@@ -27,6 +27,9 @@
   }
 
   @media only screen and (max-width: 48rem) {
+    overflow: unset;
+    height: unset;
+
     & .image {
       top: -15%;
     }
@@ -51,6 +54,12 @@
   background-color: rgb(var(--blue-50));
   z-index: 1;
   width: 100%;
+
+  @media only screen and (max-width: 48rem) {
+    height: 12rem;
+    overflow: hidden;
+    position: static;
+  }
 }
 
 .white {
@@ -72,6 +81,10 @@
 
   @media only screen and (max-width: 64rem) {
     padding: 1.5rem;
+  }
+
+  @media only screen and (max-width: 48rem) {
+    position: static;
   }
 }
 

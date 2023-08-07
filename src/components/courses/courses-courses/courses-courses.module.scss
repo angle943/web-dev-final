@@ -45,13 +45,8 @@
 
   @media only screen and (max-width: 48rem) {
     align-self: center;
-    grid-template-columns: repeat(1, 24rem);
-    grid-auto-rows: 22rem;
-  }
-
-  @media only screen and (max-width: 40rem) {
-    grid-template-columns: repeat(1, 1fr);
-    grid-auto-rows: 20rem;
+    grid-template-columns: minmax(auto, 24rem);
+    grid-auto-rows: auto;
     width: 100%;
   }
 }
