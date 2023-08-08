@@ -6,6 +6,7 @@ import styles from "./report.module.scss";
 import { ReportHeader } from "@/components/report/report-header";
 import { Container } from "@/components/container";
 import { ReportPrompt } from "@/components/report/report-prompt";
+import Image from "next/image";
 
 export default function Report() {
   const { isLightMode, toggleLightMode } = useColorContext();
@@ -490,7 +491,157 @@ export default function Report() {
           <ReportPrompt>
             Site map (if useful), wireframes and mock-ups
           </ReportPrompt>
-          <p>TODO</p>
+          <h4>Site Map</h4>
+          <Image
+            src="/report/sitemap.png"
+            alt="Sitemap Diagram"
+            width={950}
+            height={500}
+          />
+          <h4>Wireframes</h4>
+          <h6>Header Wireframe</h6>
+          <Image
+            src="/report/wireframes/header.jpg"
+            alt="Header Wireframe"
+            width={950}
+            height={500}
+          />
+          <h6>Home Page Wireframe</h6>
+          <Image
+            src="/report/wireframes/home.jpg"
+            alt="Home Page Wireframe"
+            width={950}
+            height={500}
+          />
+          <h6>Courses Page Wireframe</h6>
+          <Image
+            src="/report/wireframes/courses.jpg"
+            alt="Courses Page Wireframe"
+            width={950}
+            height={500}
+          />
+          <h6>Blog Page Wireframe</h6>
+          <Image
+            src="/report/wireframes/blog.jpg"
+            alt="Blog Page Wireframe"
+            width={950}
+            height={500}
+          />
+          <h6>Play Page Wireframe</h6>
+          <Image
+            src="/report/wireframes/play.jpg"
+            alt="Play Page Wireframe"
+            width={950}
+            height={500}
+          />
+          <h6>Join Page Wireframe</h6>
+          <Image
+            src="/report/wireframes/join.jpg"
+            alt="Join Page Wireframe"
+            width={950}
+            height={500}
+          />
+
+          <h4>Mocks</h4>
+          <h6>Mobile Header Mocks</h6>
+          <Image
+            src="/report/mocks/header-mobile.png"
+            alt="Mobile Header Mocks"
+            width={950}
+            height={500}
+          />
+          <h6>Home Page Wireframe</h6>
+          <Image
+            src="/report/mocks/home-desktop.png"
+            alt="Desktop Home Mocks"
+            width={950}
+            height={500}
+          />
+          <Image
+            src="/report/mocks/home-mobile.png"
+            alt="Mobile Home Mocks"
+            width={950}
+            height={500}
+          />
+          <h6>Courses Page Wireframe</h6>
+          <Image
+            src="/report/mocks/courses-desktop.png"
+            alt="Desktop Courses Mocks"
+            width={950}
+            height={500}
+          />
+          <Image
+            src="/report/mocks/courses-mobile.png"
+            alt="Mobile Courses Mocks"
+            width={950}
+            height={500}
+          />
+
+          <h6>Blog Page Wireframe</h6>
+          <Image
+            src="/report/mocks/blog-desktop.png"
+            alt="Desktop Blog Mocks"
+            width={950}
+            height={500}
+          />
+          <Image
+            src="/report/mocks/blog-mobile.png"
+            alt="Mobile Blog Mocks"
+            width={950}
+            height={500}
+          />
+
+          <h6>Play Page Wireframe</h6>
+          <Image
+            src="/report/mocks/play-desktop.png"
+            alt="Desktop Play Mocks"
+            width={950}
+            height={500}
+          />
+          <Image
+            src="/report/mocks/play-mobile.png"
+            alt="Mobile Play Mocks"
+            width={950}
+            height={500}
+          />
+
+          <h6>Join Page Wireframe</h6>
+          <Image
+            src="/report/mocks/join-desktop-1.png"
+            alt="Desktop Join Mocks 1"
+            width={950}
+            height={500}
+          />
+          <Image
+            src="/report/mocks/join-mobile-1.png"
+            alt="Mobile Join Mocks 1"
+            width={950}
+            height={500}
+          />
+          <Image
+            src="/report/mocks/join-desktop-2.png"
+            alt="Desktop Join Mocks 2"
+            width={950}
+            height={500}
+          />
+          <Image
+            src="/report/mocks/join-mobile-2.png"
+            alt="Mobile Join Mocks 2"
+            width={950}
+            height={500}
+          />
+          <Image
+            src="/report/mocks/join-desktop-3.png"
+            alt="Desktop Join Mocks 3"
+            width={950}
+            height={500}
+          />
+          <Image
+            src="/report/mocks/join-mobile-3.png"
+            alt="Mobile Join Mocks 3"
+            width={950}
+            height={500}
+          />
           <hr />
         </Container>
       </div>
